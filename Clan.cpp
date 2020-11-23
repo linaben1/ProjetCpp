@@ -16,17 +16,17 @@ string Clan::GetClanName()
 }
 
 /****************************************************************************************************************************************************************/
-/** Fonction qui renvoie le surnom du clan de mon personnage
- * @return nickname : Surnom du clan de mon personnage */
+/** Fonction qui renvoie le nom du joueur de mon personnage
+ * @return playername : nom du joueur de mon personnage */
 
-void Clan::SetNickname(string surnomClan)
+void Clan::SetPlayername(string nomPlayer)
 {
-	nickname = surnomClan;
+	playername = nomPlayer;
 }
 
-string Clan::GetNickname()
+string Clan::GetPlayername()
 {
-	return nickname;
+	return playername;
 }
 
 /****************************************************************************************************************************************************************/
