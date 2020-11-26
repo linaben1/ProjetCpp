@@ -1,0 +1,225 @@
+#### Knowledges
+
+Knowledges involve the application of the mind, notthe body. Consequently, Knowledge Abilities are mostoften paired with Mental Traits. (It’s possible to rollCharisma + Academics, or even Stamina + Medicine,but such things are pretty rare.) The following descriptions speak of Knowledge levels in collegiate terms,although formal schooling is just one way to improvea Knowledge. Indeed, Knowledges can be self-taught,and the World of Darkness is home to any number ofautodidacts.If you don’t have any dots in a Knowledge, you cannoteven attempt a roll involving it unless the Storytellergives explicit permission (such as where common triviais concerned). If you don’t know Spanish, you can’t tryholding a conversation en español on your wits alone.
+
+
+
+--Academics
+
+	*This catchall Knowledge covers the character’s erudition in the humanities: literature, history, art, philosophy, and other “liberal” arts and sciences. A character with dots in Academics is generally well roundedin these fields, and at high levels may be considered anexpert in one or more areas of study. Not only can thisKnowledge impress at salons and other Elysium functions, but it can also offer valuable clues to certain past— and future — movements in the Jyhad. If you like,you can choose a specialty for Academics even at lessthan 4 dots.
+
+	1:You’re aware that 1066 isn’ta Beverly Hills area code.
+
+	2:You can quote from theclassics, identify major culturalmovements, and expound on thedifference between Ming andMoghul.
+
+	3:You could get a paperpublished in a scholarly journal.
+
+	4:Professor emeritus
+
+	5:Scholars worldwide acknowledge you as one of theforemost experts of your time.
+
+	&Possessed by: Professors, Literati, Topical Bloggers,Elders
+
+	@Specialties: Poststructuralism, Impressionist Painting, Imperial Rome, Color Theory, Linguistics
+
+
+
+--Computer
+
+	*This Knowledge represents the ability to operate andprogram computers, including mobile devices. MostComputer use also imparts a degree of Internet awareness (if not savvy).
+
+	1:You can navigate touchscreen and traditional point-and-clickGUIs.
+
+	2:You know your way aroundvarious applications and the Internet.
+
+	3:You know what to do with atext command prompt.
+
+	4:You can make a verycomfortable living as a consultant.
+
+	5:You have all the SDKs andcomprehend data structures for astunning variety of programminglanguages.
+
+	&Possessed by: Hackers, Office Workers, Programmers, Data Processors, Students
+
+	@Specialties: “The YouTubes,” Computer Languages,Internet, Database Administration, HCI, Viruses, specific devices and programs
+
+
+
+--Finance
+
+	*You know the ins and outs of commerce, from evaluating an item’s relative worth to keeping up withcurrency exchange rates. This Knowledge can be invaluable when brokering items, running numbers, orplaying the stock market. Sufficiently high levels inFinance allow you to raise your standards of living to avery comfortable level.
+
+	1:You’ve taken a few businessclasses.
+
+	2:You have some practicalexperience and can keep your booksfairly neat.
+
+	3:You’d make a fine stockbroker.
+
+	4:Corporations follow yourfinancial lead.
+
+	5:You could turn a $20 billinto a fortune.
+
+	&Possessed by: Executives, Upper Class, Stockbrokers, Accountants, Fences, Drug Dealers, Smugglers
+
+	@Specialties: Stock Market, Laundering, Appraisal,Foreign Currencies, Accounting, Fencing, Corporations, Federal Bailouts
+
+
+
+--Investigation
+
+	*You’ve learned to notice details others might overlook, and might make an admirable detective. ThisKnowledge represents not only a good eye for detail,but also an ability to do research and follow leads. Suchresearch may include Internet searches or more specificresearch techniques like hitting the law books and periodicals archives at the library.
+
+	1:You can parse a broad Websearch for clues.
+
+	2:Police officer
+
+	3:Private detective
+
+	4:Federal agent
+
+	5:Sherlock Holmes
+
+	&Possessed by: Detectives, Mystery Buffs, Policemen,Stalkers
+
+	@Specialties: Forensics, Shadowing, Search, Discolorations, Database Research
+
+
+
+--Law
+
+	*The Law Knowledge represents a knowledge of bothlegal statutes and proper procedures for enforcingthem. Law can be useful for filing suits, avoiding lawsuits, or getting out of jail. What’s more, the Kindredkeep their own laws, and more than one vampire hassaved his own unlife by deftly exploiting a loopholein one of the Traditions. The Law Knowledge has anynumber of specialties, and a player may choose one forher character when she takes this Ability, representingboth her field of experience and a general sense for howthe legal system (especially in her locality) functions,though this is not mandatory.
+
+	1:You’ve paid a traffic ticketand know whether to plead guilty,not guilty, or nolo contendere nexttime.
+
+	2:You’re either studying for orjust passed the bar exam.
+
+	3:You can make a living of thepractice, and probably do.
+
+	4:If you’re not partner yet,you will be soon.
+
+	5:You could find the loopholesin the Devil’s contracts.
+
+	&Possessed by: Lawyers, Police, Judges, Detectives,Legislators
+
+	@Specialties: Criminal, Suits, Courtroom Protocol, Contracts, Police Procedure, the Traditions, the Code of Milan
+
+
+
+--Medicine
+
+	*You have an understanding of how the human body— and to a lesser extent the vampiric body — works.This Ability covers knowledge of medicines, ailments,first-aid procedures, and diagnosis or treatment of disease. Medicine is of great use to those Kindred with aninterest in repairing, damaging, or reworking the human body.
+
+	1:You’ve taken a CPR course.
+
+	2:Premed or paramedic
+
+	3:General practitioner
+
+	4:You can performtransplants.
+
+	5:You are respected by theworld’s medical community as apioneer.
+
+	&Possessed by: Med Students, Doctors, Lifeguards,Parents, Paramedics, Tzimisce
+
+	@Specialties: Organ Transplants, Emergency Care,Poison Treatments, Pathology, Pharmaceuticals, theKindred Condition
+
+
+
+--Occult
+
+	*You are knowledgeable in occult areas such as mysticism, curses, magic, folklore, and particularly vampirelore. Unlike most other Knowledges, Occult does notimply a command of hard facts. Much of what youknow may well be rumor, myth, speculation, or hearsay. However, the secrets to be learned in this field areworth centuries of sifting legend from fact. High levelsof Occult imply a deep understanding of vampire lore,as well as a good grounding in other aspects of the occult. At the very least, you can discern what is patentlyfalse.
+
+	1:You’ve got a blog about theeerie and the disturbing.
+
+	2:There seems to be someunsettling truth to some of the rumorsyou’ve heard.
+
+	3:You’ve heard a lot andactually seen a little for yourself.
+
+	4:You can recognizeblatantly false sources and makeeducated guesses about the rest.
+
+	5:You know most of the basictruths about the hidden world.
+
+	&Possessed by: Occultists, The Superstitious, NewAgers, Tremere
+
+	@Specialties: Kindred Lore, Rituals, Infernalism,Witches, Noddist Lore
+
+
+
+--Politics
+
+	*You are familiar with the politics of the moment, including the people in charge and how they got there.This Knowledge can aid you in dealing with or influencing mortal politicians, or even offer some insightinto the local Cainite power structure. The PoliticsKnowledge includes the ability to practically navigatevarious bureaucracies, as it assumes that certain organizational structures and relationship currencies areuniversal.
+
+	1:Activist; you can pay aspeeding ticket online.
+
+	2:Political science major;you know how to file a request forinformation.
+
+	3:Campaign manager or talkradio host; the clerk will help younavigate the forms you need tocomplete and tell you who needs theduplicates.
+
+	4:Senator; “We’re notsupposed to show this to anyonewithout press credentials, so don’tquote me.”
+
+	5:You could choose the nextPresident of the United States. “Sure,here are the keys to the file morgue.Turn off the light when you leave.”
+
+	&Possessed by: Activists, Politicians, Lawyers, vampires of all sorts
+
+	@Specialties: City, State, Federal, Bureaucracy, Dogma, Radical, Camarilla
+
+
+
+--Science
+
+	*You have at least a basic understanding of most of thephysical sciences, such as chemistry, biology, physics,and geology. This Knowledge can be put to all formsof practical use. In most cases, a player should select a specialty to reflect a focus for her character’s scientificstudies, but this isn’t strictly necessary.
+
+	1:You know most of the highschool basics.
+
+	2:You’re familiar with themajor theories.
+
+	3:You could teach high-schoolscience.
+
+	4:You’re fully capable ofadvancing the knowledge in your field.
+
+	5:Your Nobel Prize is waitingfor you.
+
+	&Possessed by: Scientists, Students, Researchers,Teachers, Engineers, Technicians, Pilots
+
+	@Specialties: Chemistry, Biology, Geology, Physics,Astronomy
+
+
+
+--Technology
+
+	*The Technology Knowledge represents a broad acumen with electronics, computer hardware, and devicesmore elaborate than “machines,” which fall under theCrafts Skill. If it has a processor, a transistor, or an integrated circuit — if it’s electronic rather than electrical— manipulating it uses the Technology Knowledge.This is the wide-ranging Ability used to build one’sown computer, install (or subvert) a security system,repair a mobile phone, or kitbash a shortwave radio.You must always choose a specialization in Technology, even though you possess some skill in multiplefields.
+
+	1:You can perform simplemodifications or repairs.
+
+	2:You could make your livingin assembly or repair.
+
+	3:You can design newtechnologies from a set of objectiverequirements.
+
+	4:For you, it’s not, “Canthis be done?” but “How can this bedone?”
+
+	5:A visionary in the field; youshape how people interact with theirworld through devices.
+
+	&Possessed by: Engineers, Scientists, Defense Contractors, the Cable Guy
+
+	@Specialties: Telecom, Computers, Security, Communications, Improvised Solutions, Industrial Espionage
+
+
+
+--Expert Knowledge
+
+	*Like Hobby Talent and Professional Skill, this is acatchall category. An Expert Knowledge is anythingthat is primarily intellectual or mental in nature andmust be studied. Storytellers should first examine thelist of existing Knowledges to determine if a particularfield of expertise might fall under one of those (e.g. Forensics would be a specialty of Investigation).
+
+	1:You’ve taken anundergraduate course or read a fewbooks.
+
+	2:You may have minored inthe field.
+
+	3:You might hold a degree andare well versed in what’s beenwritten.
+
+	4:You are well-versed inwhat hasn’t been written.
+
+	5:You know the hiddenmysteries of your field and are averitable font of information.
+
+	!Suggested Expert Knowledges: Archaeology, GameTheory, Military Science, Psychology
+
+
+
+

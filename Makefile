@@ -1,10 +1,10 @@
 #########################################
 # Directory where to put the object files
-OBJDIR = .
+OBJDIR = ./FilesCpp_h
 
 #########################################
 # Directory where to locate source files
-SRCDIR = .
+SRCDIR = ./FilesCpp_h
 
 #########################################
 # Compiler

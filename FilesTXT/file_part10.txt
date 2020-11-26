@@ -1,0 +1,388 @@
+#### Disciplines Rituals
+
+
+
+----Necromantic Rituals
+
+	*The rituals connected with Necromancy are a hodgepodge lot. Some have direct relations to the paths, whileothers seem to have been taught by ghosts themselves,for whatever twisted reason. All beginning necromancers gain one Level One ritual automatically, but anyothers learned must be gained through in-game play.Necromantic rituals are otherwise identical to Thaumaturgy rituals (pp. 230-240) and are learned in similarfashion, though the two are not at all compatible.System: Casting times for necromantic rituals varywidely; see the description for particulars. The playerrolls Intelligence + Occult (difficulty 3 + the level ofthe ritual, maximum 9). Success indicates the ritualproceeds smoothly, failure produces no effect, and abotch indicates something has gone horribly wrong.
+
+
+
+--Level One Rituals
+
+	1:Call of the Hungry Dead
+
+	*Call of the Hungry Dead takes only 10 minutes tocast and requires a hair from the target’s head. The ritual climaxes with the burning of that hair in the flameof a black candle, after which the victim becomesable to hear snatches of conversation from across theShroud. If the target is not prepared, the voices comeas a confusing welter of howls and unearthly demands;he is unable to make out anything intelligible, and maygo briefly mad.
+
+	1:Eldritch Beacon
+
+	*Eldritch Beacon takes 15 minutes to cast. The material component is a green candle, the melted wax fromwhich must be collected and molded into a half-inch(1.5 cm) sphere. Whoever carries this sphere, whetherin his hand or in a pocket, is highlighted in the Shadowlands with a sickly-glowing green-white aura. Allghostly powers affect this individual with greater easeand severity. The sphere retains its power for one hourper success on the casting roll.
+
+	1:Insight
+
+	*This ritual allows a necromancer to stare into theeyes of a corpse and see reflected there the last thingthe dead man witnessed. The vision appears only inthe eyes of the cadaver and is visible to no one except the necromancer using Insight. The player rolls as normal as the vampire stares into the target’s eyesfor five minutes. The number of successes on the rolldetermines the clarity of the vision. A botch shows thenecromancer his own Final Death, which can provokea Rötschreck roll (see p. 299).This power cannot be used on the corpses of vampireswho have reached Golconda, or on bodies in whichboth eyes are missing or advanced decomposition hasalready occurred.
+
+		@1 success		A basic sense of the subject’s death
+
+		@2 successes		A clear image of the subject’s deathand the seconds preceding it
+
+		@3 successes		A clear image, with sound, of theminutes preceding death
+
+		@4 successes		A clear image, with sound, of thehalf-hour before the subject’s demise
+
+		@5 successes		Full sensory perception of the hourleading up to the target’s death
+
+	1:Knowing Stone
+
+	*By use of her own blood and the proper rituals, anecromancer can mark a person’s spirit, allowing thevampire to see where her subject is at any time, evenafter he has died. In this fashion many of the spirithaunted vampires keep tabs on their close kin andtheir enemies.The necromancer cuts her skin or otherwise bleedsherself, and then uses the vitae to paint the name ofthe target on a consecrated stone. If the ritual is successful, she can afterward learn the target’s currentwhereabouts by dancing around the stone in a trancestate until one of the spirits whispers the desired information into her ear. The stone loses its powers on thenight of All Saints Day unless the vampire spends ablood point.
+
+	1:Minestra di Morte
+
+	*The necromancer obtains a piece of a dead body andsimmers it in a pot with half a quart (or half a liter)of vampiric vitae. To this stew, the necromancer addsrosemary (for remembrance), basil (the funerary herb),and salt (the alchemic principle of clarification). Afterbringing the concoction to a full boil, the necromancereats it.If the roll to activate this ritual is successful, thecharacter discovers whether the subject of the grisly rite became a wraith or Spectre after death, or if indeedshe became either. Unfortunately, this information canbe learned only about the person from whose body the“stew meat” was taken.The blood component is spent progressively throughthe ritual: If the Necromancer takes the blood fromanother Kindred, she doesn’t become partially boundfrom drinking it, nor does she add a point to her bloodpool. Similarly, if she uses her own blood, her pool decreases by a point but does not increase when she consumes the soup.Necromantic vampires without the Eat
+ Food Merit(see p. 480) can’t keep the soup down, but can still usethe ritual and gain the information.
+
+	1:Ritual of the Smoking Mirror
+
+	*This ritual allows the necromancer to use an obsidianmirror to see as ghosts do. By gazing into the mirror’sebony depths, the vampire may discover an object’sflaws, assess the general health of mortals, or even reada being’s aura.At the start of the ritual, the Kindred decides whichof the ritual’s two aspects she will use — she may not use both at the same time. With Lifesight, the necromancer may read auras as if she had the level twoAuspex power Aura Perception. Deathsight, on theother hand, grants the necromancer the ability to seeghosts and the Shadowlands. It also shows the stain ofoblivion on the living, as per Eyes of the Dead (p. 174).At the Storyteller’s discretion, the Kindred may makea similar study of an inanimate object’s flaws and howto repair them, if that object has a strong link to eitherlife- or death-energies (such as a murderer’s knife or awindow box used to grow healing herbs).To perform the ritual, the necromancer grasps an obsidian mirror that 
+has had its edge sharpened so that itcuts the flesh of whoever takes hold of it. As the vitaeflows onto the mirror’s surface, it allows the mirror’s reflective power to bridge the worlds of the living and thedead, much as it allows the necromancer herself to do.The player then rolls to activate the ritual as normal.If successful, the Necromancer may view the world asa ghost does via the reflective surface of the mirror, forone scene. On a botch, the vampire may well invokethe ire of the spirits upon whom she calls.
+
+
+
+--Level Two Rituals
+
+	1:Eyes of the Grave
+
+	*This ritual, which takes two hours to cast, causes thetarget to experience intermittent visions of her deathover the period of a week. The visions come withoutwarning and can last up to a minute. The caster of theritual has no idea what the visions contain, as only thevictim sees them. Each time a vision manifests, the target must roll Courage (difficulty 7) or be reduced toquivering panic. The visions, which come randomly,can also interfere with activities such as driving, studying, shooting, and so on.Eyes of the Grave requires a pinch of soil from a freshgrave.
+
+	1:The Hand of Glory
+
+	*The Hand of Glory is a mummified hand used by thenecromancer to anesthetize a home’s residents and,thereby, allow him free rein to do what he will in theresidence. To create one, the necromancer wraps thesevered hand of a condemned murderer in a shroud,draws it tight to squeeze out any remaining blood, andpreserves the hand in an earthenware jar with salt, saltpeter, and long peppers. After a fortnight, the vampireremoves the hand and dries it in an oven with vervainand fern. At the end of this process, if the roll to activate the ritual garners any successes, the creation isviable.To use the Hand of Glory, the vampire first coatsthe fingertips of the mummified hand with a flammablesubstance derived from the fat of a hanged man andsets the fingers alight. The necromancer then recitesthe phrase, “Let all those who are asleep be asleep, andlet those who are awake be awake.” All mortals withina household who are affected fall into a deep sleep andcannot be roused (the hand has no
+ effect on supernatural creatures). For each unaffected occupant of a home,one finger of the hand will refuse to light. Botches mayresult in all of the fingers being lit but no one in thehome being asleep. The hand may be extinguished atany time by the necromancer who created it. Anyoneelse wishing to douse the hand must use milk to do so— nothing else works. Once made, the Hand of Glorymay be reused indefinitely. Effects last for one scene.
+
+	1:Occhio d’Uomo Morto
+
+	*To cast this ritual, the necromancer needs an eyefrom a corpse whose absent soul became a ghost or Spectre. The eye is ritually prepared in a process involving incense, the new moon, and a period of midnight chanting. The chanting climaxes when the necromancer removes one of her own eyes and replaces itwith the one from the corpse (fresher is better). Kindred healing takes over at that point, sealing the eyewithin the socket.If the ritual succeeds, the Necromancer permanentlygains the Shroudsight ability (see p. 163). This abilityis always active and does not require a roll.Furthermore, if it was a Spectre’s corpse, the vampirecan hear the vague murmuring of any Spectres in thearea. This ability isn’t very precise; rather than mindreading, it’s more like trying to overhear a low-voicedconversation in the next room. With a Perception +Occult roll, the Necromancer can glean a very vagueimpression of what nearby Spectres are up to. Botchingthis roll may well earn the necromancer 
+a new derangement (at the Storyteller’s discretion), as the whisperscreep into the caster’s subconscious.This ritual has some major drawbacks, the first beingthat its proper result is hideously ugly. Unless the vampire wears sunglasses or finds some other way to conceal her eye, her Appearance is reduced by one dot.Also, dead or rotted tissue is not the best for normalperception. Any mundane visual Perception rolls are at+1 difficulty (possibly more if the corpse had bad eyesight in life). On the other hand, since the eye offersa window into a different soul than the necromancer,it offers some protection against powers requiring eyecontact. These Disciplines are used against the deadeyed necromancer at +1 difficulty.Most importantly, however, the ghost whose bodywas desecrated knows it, and very likely hates it. Theghost can find the necromancer possessing his eye anywhere, and all ghostly powers used against the necromancer by that particular ghost are at –1 difficulty.
+
+	1:Puppet
+
+	*Used primarily to facilitate conversations with therecently departed, though also applied as a method ofpsychological torture, Puppet prepares a subject (willing or unwilling) as a suitable receptacle for ghostlypossession. Over the course of one hour, the necromancer smears grave soil across the subject’s eyes, lips, andforehead. For the remainder of the night, any wraithattempting to take control of the subject gains two automatic successes. The ritual’s effects remain even ifthe soil is washed off.	1:The Ritual of Pochtli
+
+	*This ritual cannot be cast by itself, but only in conjunction with another Necromantic ritual, or with theheavily ritualized use of a Necromantic path. The action of the ritual is this: Two or more Kindred necromancers restrain a mortal vessel and inflict incisions inthe shape of blasphemous symbols (typically subvertedEgyptian hieroglyphs or Aztec symbols). They thendrink from these injuries. Each participating Necromancer must make his own cut and drink from no other cut. Thereafter, the Necromantic power the Kindredseek to employ gains the benefit of all the participants’knowledge. This ritual makes it possible for Necromancers to create truly fearsome feats of death magic.The player rolls to activate this ritual as normal. Ifthe roll succeeds, the Kindred who have participatedin the ritual may work together on the path or ritualthe Ritual of Pochtli is intended to assist, and playersshare successes. Note that the primary application ofNecromancy requires its own roll, and that
+ successes(and failures) garnered by the group are pooled. AllKindred participating in the ritual must know the Ritual of Pochtli as well as the ritual or path power thegroup seeks to enact.The downside of this power is that a single player’sbotch negates the successes of the entire group, resulting in a horrific failure for all the ritual workers.
+
+	1 Two Centimes
+
+	*The necromancer ceremonially “kills” a mortal, laying him out on a pallet and putting pennies on his eyes.The mortal’s soul journeys to the Underworld, whichhe perceives, initially at least, as a way-station. Themortal can interact with the souls of the dead and travel elsewhere in the Underworld, while also retainingthe power to speak to the vampire and describe whathe’s experiencing. While in the Underworld, however,the subject’s soul cannot affect the environment. Although he may talk to other spirits, he may not physically interact with them or their surroundings — he isa “ghost among ghosts,” as it were. Minions may voluntarily undergo the ritual to assist necromancers, orthe vampire may use Two Centimes to terrify unwilling victims.
+
+
+
+--Level Three Rituals
+
+	1:Blood Dance
+
+	*The Blood Dance allows a ghost to communicatewith a living relative. Necromancers sometimes perform this ritual for people in exchange for money orfavors.The vampire must dance and chant for two hours,calling forth the right spirit and entreating all otherghosts to leave the area. While dancing, the vampirepours colored sands and ocean salt on the ground in aprecise pattern and then makes the link between theliving person and the deceased. If successful, the ghost“appears” within the necromancer’s sand-sigil and theliving person can communicate with her for one hour.Failure means the spirit could not be contacted.
+
+	1:Divine Sign
+
+	*Upon learning a person’s birth date, the necromancer’s player may roll to activate this ritual. If successful,the Kindred may use this to predict the target’s nextcourse of action, allowing him to deal with it accordingly. The effect on ghosts is quite different: Instead,the ritual imparts upon the necromancer so intimatean understanding of the wraith in question that it actsas a connection to the ghost, making it easier to invokeother Necromancy effects on that spirit. For story purposes, it’s the equivalent to holding one of that wraith’sfetters (see Ritual of the Unearthed Fetter, below).
+
+	1:Din of the Damned
+
+	*This ritual is similar to the Level One Ritual Callof the Hungry Dead (see p. 177) in that it makes thesounds of the Underworld audible in the physical realm.However, Din of the Damned is an area-effecting ritual used to ward a room against eavesdropping. Overthe course of half an hour, the necromancer draws anunbroken line of ash from a crematorium along theroom’s walls (this line may pass over doorframes to allow entrance and egress). For the rest of the night, anyattempt to listen in on events inside the room, whethersimple (such as a glass to the wall), electronic (like alaser microphone), or mystic (including powers such asHeightened Senses), requires the eavesdropper to scoremore successes in a Perception + Occult roll (difficulty7) than the caster of the ritual scored. Failure to beatthis mark gives the listener an earful of ghostly wailingand moaning and the sound of howling winds; a botchdeafens him for the rest of the night.
+
+	1:Nightmare Drums
+
+	*The necromancer using this ritual sends the dead tohaunt the dreams of an enemy, using the ghosts to drivean opponent slowly insane. Once the ritual is cast, thevampire has no control over this power, except to stopit from continuing. The shape of the nightmares and the images that assault the target are not under thecontrol of the necromancer; they are under the controlof the ghosts who actually do the haunting.The necromancer uses his own blood and a personalpossession of the target’s in this ritual. Once the itemhas been coated with blood, the vampire must burn theitem, sending a ghostly icon of it to the Shadowlandsboth as an identifying badge and as a reward to theghosts who agree to haunt the target. While the itemburns, the necromancer (and assistants, if available)pound out a relentless beat on gigantic drums of human skin. The drums are inaudible in this realm butthunderous in the home of the dead. To silence thedeafening drums, the ghosts resignedly agree to negotiate wi
+th the necromancer. They promise to send nightmares to the victim for as long as the vampire demands,in return for a favor. Their request normally runs alongthe lines of passing a message to a living relative or exacting revenge against someone who slighted them.
+
+	1:Ritual of The Unearthed Fetter
+
+	*This ritual requires that a necromancer have a finger bone from the skeleton of the particular ghost he’sinterested in. When the ritual is cast, the finger bonebecomes attuned to something vitally important to thewraith, the possession of which by the necromancermakes the casting of Necromantic powers against thatghost much easier (see the Sepulchre Path, p. 160, foran example). Most necromancers take the attuned finger bone and suspend it from a thread, allowing it toact as a sort of supernatural compass and following it tothe special item in question.Ritual of the Unearthed Fetter takes three hours tocast properly. It requires both the name of the ghosttargeted and the finger bone already mentioned, aswell as a chip knocked off a gravestone or other marker(not necessarily the marker of the bone’s former owner). During the course of the ritual the stone crumblesto dust, which is then sprinkled over the finger bone. roll against difficulty 7 (if done outside of combat, thediffic
+ulty is only 6). During the next combat turn, shebites through her own lips (taking a level of bashingdamage) and spits (spending one blood point). Thenthe normal ritual roll is made to see whether the powertakes effect.
+
+	1:Tempesta Scudo
+
+	*Unlike most rituals, Tempesta Scudo can be castspeedily. The necromancer performs a short and awkward dance that ends with her biting through her ownlip and spitting the blood in a circle around her. Allghosts’ actions within the circle of blood are made at+2 difficulty. To cast this ritual successfully, the necromancer mustspend one combat turn performing the dance. At theend of the turn, she makes a Dexterity + Performance
+
+
+
+--Level Four Rituals
+
+	1:Baleful Doll
+
+	*A baleful doll is a powerful figure that is linked directly to the spirit of the target. This doll must be handcrafted, and is only finished when it has been paintedwith the blood of the necromancer and dressed in somearticle of clothing from the victim (which should beunwashed for a better connection). Once the doll hasbeen cursed, the vampire can use it to cause physicaldamage to the target. If the doll is injured (often withpins or other items), the victim takes six dice of bashing damage. If the doll is destroyed, the target sufferssix dice of lethal damage.The necromancer must craft the doll, using ritualchants throughout the process. This normally takesfour to five hours. The player rolls Stamina + Crafts(difficulty 8) to succeed in this part of the ritual — adoll that does not resemble its victim is useless for thepurposes of this ritual, though some necromancers sellfailures as “authentic voodoo dolls” to tourists.
+
+	1:Bastone Diabolico
+
+	*Casting this ritual is tricky because it requires theremoval of a leg bone from a living person. The donormust survive the removal, at least for a little while. Thebone is then submerged in molten lead. Once it cools,the thin lead coating is inscribed with various runes.The necromancer then uses this metal-shod boneto beat its donor to death while repeating a droningGreek chant. With a successful roll, this ritual produces a bastonediabolico or “devil stick.” The stick can be activated byanyone who holds it and expends a point of Willpower.Activation lasts for a scene, and during that time anyghost hit with the devil stick loses a point from its Passion pool (see p. 385). In addition to its normal effects,this club does an additional die of damage when usedagainst the walking dead (not vampires), and suchdamage is aggravated. Unfortunately for the necromancer, ghosts can sensethat the bastone diabolico is bad news, even if they don’tknow exactly what the thing does. They tend 
+to stay away from anybody carrying one, which means that allrolls for such a character to use powers that summon orattract ghosts occur at +1 difficulty.
+
+	1:Cadaver’s Touch
+
+	*By chanting for three hours and melting a wax doll inthe shape of the target, the necromancer turns a mortaltarget into a corpselike ruin. As the doll loses the lastof its form, the target becomes cold and clammy. Hispulse becomes weak and thready, and his flesh pale andchalky. For all intents and purposes, he becomes a reasonable facsimile of the walking dead. This can havesome adverse effects in social situations (+2 difficultyon all Social rolls). The effects of the ritual wear offonly when the wax of the doll is permitted to solidify.If the wax is allowed to boil off, the spell is broken.
+
+	1:Peek Past the Shroud
+
+	*This hour-long ritual enchants a handful of ergotfungi mold to act as a catalyst for second sight. By eating a pinch of the mold, a subject gains the benefits ofShroudsight (p. 163) for a number of hours equal to thenecromancer’s Stamina score. Three doses of the enchanted ergot are created for every success on the roll.Ergot is normally poisonous to some degree; this ritualremoves its toxic properties. However, a botch rendersthe ergot highly and instantaneously toxic, inflictingeight dice of lethal damage on any subject who ingestsit — including vampires.
+
+	1:Ritual of Xipe Totec
+
+	*To perform the ritual, the Kindred removes his victim’s top layer of skin with an obsidian dagger, taking care to damage the skin as little as possible in theprocess. The victim must survive this process (thoughshe may well die of blood loss shortly after the ritualif not seen to properly). He then drains the victim’sblood into a large ceremonial golden bowl. There theblood is mixed with octli, amaranth flower, and otheringredients. When imbibed by the necromancer, thismixture causes him to sweat a glistening sheen of blood(equal to one blood point). The Kindred then dons theskin of his victim, which on a successful roll absorbsthe Kindred vitae and begins to heal, forming a secondskin over the vampire’s own. The victim needs to be ofsimilar stature — otherwise, the features become distorted and the disguise is rendered useless. This poweralso has no effect on supernatural creatures (althoughit can affect ghouls).Under normal visual scrutiny, the ruse is flawless. Ofcourse, 
+it imparts none of the victim’s knowledge ormannerisms (and does nothing to mask the Kindred’sown undead nature). Therefore, it works best for situations in which contact with friends and family maybe minimized. To preserve the skin’s condition, theKindred must bathe it in a blood point’s worth of vitae nightly. When the necromancer removes the skin(which causes one level of unsoakable lethal damageto the user and must be done with the same knife usedto flay the victim in the first place), it is ruined in theprocess.
+
+
+
+--Level Five Rituals
+
+	1:Chill of Oblivion
+
+	*Performed over the course of 12 hours (reduced byone hour per success on the casting roll), this ritualinfuses the necromancer or a willing subject with thechill of the grave. The ritual’s material component is aone-foot (half-meter) cube of ice, which is slowly melted on the subject’s chest (inflicting three health levelsof bashing damage on mortal subjects). The subjectmust lie naked on bare earth for the entire durationof the ritual. Once the ritual is completed, its effectsremain for a number of nights equal to the caster’s Occult rating.An individual affected by Chill of Oblivion treatsaggravated damage from fire and high temperatures asif it were lethal damage. Furthermore, he may attemptto extinguish any fire by rolling Willpower (difficulty9); each success reduces the fire’s soak difficulty (seep. 297) by 1, and a fire with a soak difficulty of 2 dwindles to glowing embers.However, this ritual has several drawbacks. Firstand foremost, the subject’s aura is laced wi
+th writhingblack veins that resemble those left by diablerie, andmay well be mistaken for such by any observer who isnot familiar with this ritual. The subject also radiates apalpable aura of cold that extends to about arm’s lengthfrom him; this can be extremely disconcerting to mortals, though it causes no damage, and its game effectsmirror those of the Flaws Touch of Frost (p. 494) andEerie Presence (p. 495). Finally, the mystical nimbus ofthe ritual draws hostile ghosts to the subject, who mayplague him with unwholesome acts.
+
+	1:Dead Man’s Hand
+
+	*The necromancer takes a rag stained in the blood,sweat, or tears of the intended victim. She takes afreshly severed human hand (which can come eitherfrom a corpse or a living “donor”) and closes it around the rag. As the hand decomposes, so does the victim.His flesh bloats, turns gray and then green, then startsto slough off. The victim’s brain remains fresh until thevery end, so he can see the maggots writhe in the putrescent rack of meat that once was his healthy body.The necromancer makes the standard roll and spendstwo blood points for each point of Stamina (and Fortitude) possessed by the victim. The victim loses healthlevels according to the timetable below. Only the removal of the rag from the hand can stop the process.If this happens, health levels return, also according tothe chart below.
+
+		Health Level		Time Until Next Loss
+
+		Bruised		12 hours
+
+		Hurt			12 hours
+
+		Injured		Six hours
+
+		Wounded		Three hours
+
+		Mauled			One hour
+
+		Crippled		30 minutes
+
+		Incapacitated		12 hours
+
+	**Mortal characters who suffer more than 12 hours ofincapacitation die, while Kindred who remain Incapacitated for more than 12 hours succumb to torpor.
+
+	1:Esilio
+
+	*Like Tempesta Scudo, Esilio is a quick and dirty ritual.The necromancer simply speaks five syllables. No onecan identify the casting language, but according to theritual’s oblique history, the language is what God gavehumankind before the confusion of Babel. The legendfurther states that while the particular meaning of thewords is lost, they are what Caine’s father said to himwhile exiling him to Nod.Regardless of the truth of the matter, the Words ofExile are not spoken lightly. When the ritual is castsuccessfully, it opens a hole within reality itself — a ripbetween the lands of the living and the darkest depthsof the Underworld. This tear is invisible to normal vision, but to Witness of Death or Shroudsight it lookslike a black vortex opening within the vampire’s ownbody (the very few unfortunate enough to look into thegap with high levels of Auspex are generally unwilling or unable to discuss it). Any ghost clutched to theKindred’s chest is instantly torn to shreds. Gr
+abbing aghost in this fashion requires a Clinch or Tackle maneuver. Destroyed spirits don’t come back for at least a month, if ever. A wraith destroyed in this fashiontends to return as a Spectre, if it returns at all.
+
+	**The necromancer may clutch and destroy a numberof spirits equal to the number of successes she rolled.After that, the vortex closes. It closes at the end of thescene if it hasn’t already. Of course, using one’s body as a portal between ourworld and what some people might call Hell is neithersimple nor healthy. For starters, it costs a blood pointand a point of Willpower (which does not give an automatic success on the ritual roll). More importantly,each success rolled inflicts a level of unsoakable lethaldamage on the necromancer. Most significantly, everyuse of Esilio permanently reduces the necromancer’sHumanity by one point if he follows that morality, andmay impact other Paths at the Storyteller’s discretion.
+
+	1:Grasp the Ghostly
+
+	*Requiring a full six hours of chanting, this ritual allows a necromancer to bring an object from the Underworld into the real world. It’s not simple, however— a wraith may object to having his possessions stolenand fight back. Furthermore, the object taken must bereplaced by a material item of roughly equal mass, otherwise the target of the ritual snaps back to its previous,ghostly existence.Objects taken from the Underworld tend to fade awayafter about a year. Only items recently destroyed in thereal world (called “relics” by ghosts) may be recapturedin this manner. Artifacts created by wraiths themselveswere never meant to exist outside the Underworld, andvanish on contact with the living world.
+
+
+
+----Thaumaturgy Rituals
+
+	*Rituals are Thaumaturgical formulas, meticulouslyresearched and prepared, that create powerful magicaleffects. Rituals are less versatile than paths, as their effects are singular and straightforward, but they are better suited to specific ends.All thaumaturges have the ability to use rituals,though each individual ritual must be learned separately. By acquainting herself with the arcane practiceof blood magic, the caster gains the capacity to manipulate these focused effects.Thaumaturgical rituals are rated from 1 to 5, eachlevel corresponding to both the level of mastery ofThaumaturgy the would-be caster must possess and therelative power of the ritual itself. Unless stated otherwise, a ritual requires five minutes per level to cast.Casting rituals requires a successful Intelligence+ Occult roll, for which the difficulty equals 3 + thelevel of the ritual (maximum 9). Only one success isrequired for a ritual to work, though certain spells mayrequire more successes or have variable 
+effects basedon how well the caster’s roll goes. Should a roll to activate a ritual fail, the Storyteller is encouraged to create strange occurrences or side effects, or even make itappear that the ritual was successful, only to reveal itsfailure at a later time. A botched ritual roll may evenindicate a catastrophic failure or summon an ill-tempered demon.Rituals sometimes require special ingredients or reagents to work — these are noted in each ritual’s description. Common components include herbs, animalbones, ceremonial items, feathers, eye of newt, tongueof toad, etc. Acquiring magical components for a powerful ritual may form the basis for an entire story.At the first level of Thaumaturgy, the vampire automatically gains a single Level One ritual. To learnfurther rituals, the thaumaturge must find someoneto teach him, or learn the ritual from a scroll, tome,or other archive. Learning a new ritual can take anywhere from a few nights (Level One ritual) to monthsor years (Leve
+l Five ritual). Some mystics have studiedindividual rituals for decades, or even centuries.
+
+
+
+--Level One Rituals
+
+	1:Bind the Accusing Tongue
+
+	*This ancient ritual is said to have been one of thefirst developed by the Tremere and a primary reason for the lack of cohesive opposition to their expansion.Bind the Accusing Tongue lays a compulsion uponthe subject that prevents him from speaking ill of thecaster, allowing the thaumaturge to commit literallyunspeakable acts without fear of reprisal.System: The caster must have a picture or other image or effigy of the ritual’s target, a lock of the target‘shair, and a black silken cord. The caster winds the cordaround the hair and image while intoning the ritual’svocal component. Once the ritual is complete, the target must score more successes on a Willpower roll (difficulty of the caster‘s Thaumaturgy rating + 3) than thecaster scored in order to say anything negative aboutthe caster. The ritual lasts until the target succeeds atthis roll or the silk cord is unwound, at which point theimage and the lock of hair crumble to dust.
+
+	1:Blood Rush
+
+	*This ritual allows the vampire to create the sensationof drinking blood in himself without actually feeding.The ritual can be used for pleasure, but it is more often used to prevent frenzy when confronted with freshblood. The vampire must carry the fang of a predatoryanimal on his person for this ritual to work.System: Performance of the ritual results in theBeast being kept in check automatically. Blood Rushallows the vampire to resist hunger-based frenzy for upto one hour, at which point the Cainite feels hungryagain (assuming he did before). This ritual takes onlyone turn to enact.
+
+	1:Communicate with Kindred Sire
+
+	*By enacting this ritual, the caster may join mindswith her sire, speaking telepathically with him overany distance. The communication may continue untilthe ritual expires or until either party ends the conversation. The caster must possess an item once owned byher sire for the ritual to work.System: The caster must meditate for 30 minutesto create the connection. Conversation may be maintained for 10 minutes per success on the activationroll.
+
+	1:Defense of the Sacred Haven
+
+	*This ritual prevents sunlight from entering an areawithin 20 feet (six meters) of this ritual’s casting. Amystical darkness blankets the area, keeping the baleful light at bay. Sunlight reflects off windows or magically fails to pass through doors or other portals. Toinvoke this ritual’s protection, the caster draws sigils in her own blood on all the affected windows and doors.The ritual lasts as long as the thaumaturge stays withinthe 20-foot (6-meter) radius.System: This ritual requires one hour to perform,during which the caster recites incantations and inscribes glyphs. One blood point is required for thisritual to work.
+
+	1:Deflection of Wooden Doom
+
+	*This ritual protects the caster from being staked,whether she is resting or active. While this ritual is ineffect, the first stake that would pierce the vampire’sheart disintegrates in the attacker’s hand. A stakemerely held near the caster is unaffected; for this ritualto work, the stake must actively be used in an attemptto impale the vampire.System: The caster must surround herself with a circle of wood for a full hour. Any wood will work: furniture, sawdust, raw timber, 2’ x 4’s, whatever. The circlemust remain unbroken, however. At the end of thehour, the vampire places a wooden splinter under hertongue. If this splinter is removed, the ritual is nullified. This ritual lasts until the following dawn or dusk.
+
+	1:Devil’s Touch
+
+	*Thaumaturges use this ritual to place curses uponmortals who earn their ire. Using this ritual marks anindividual invisibly, causing all those who come incontact with him to receive him poorly. The mortal istreated as the most loathsome individual conceivable,and all who deal with him do everything in their powerto make him miserable. Even bums spit at an afflictedindividual, and children taunt him and barrage himwith vulgarities.System: The effects of this ritual last one night, disappearing as the sun rises. The mortal (it doesn’t workon vampires) must be present when the ritual is invoked, and a penny must be placed somewhere on hisperson (in a pocket, shoe, etc.).
+
+	1:Domino of Life
+
+	*A vampire wanting or needing to simulate a humancharacteristic can do so once Domino of Life is cast. Forone entire night, the vampire can eat, breathe, maintain a normal body temperature, assume a human fleshtone, or display some other single trait of humankindshe desires. Note that only one trait can be replicatedin this fashion. The vampire must have a vial of freshhuman blood on his person to maintain this ritual. System: Using this ritual adds one die to the caster’sdice pools when attempting to pass as human. Unless onlookers are especially wary, the Domino of Lifeshould fool them into thinking the caster is mortal —not that they should have any reason to suspect otherwise.
+
+	1:Engaging the Vessel of Transference
+
+	*This ritual enchants a container to fill itself withblood from any living or unliving being who holds it,replacing the volume of blood taken with an equalamount previously held inside the container. Whenthe ritual is enacted, the vessel (which must be betweenthe size of a small cup and a one-gallon/four-liter jug) issealed full of the caster’s blood and inscribed with theHermetic sigil which empowers the ritual. Wheneveran individual touches the container with his bare skin,he feels a slight chill against his flesh but no furtherdiscomfort. The container continues to exchange theblood it contains until it is opened. The two most common uses of this ritual are to covertly create a bloodbond and to obtain a sample of a subject’s blood forritual or experimental purposes.System: This ritual takes three hours to enact (reduced by 15 minutes for each success on the castingroll) and requires one blood point (although not necessarily the caster’s blood), which is sealed inside thecont
+ainer. The ritual only switches blood between itself and a subject if it is touched with bare skin — eventhin cotton gloves keep it from activating.Individuals with at least four dots in Occult recognize the Hermetic sigil with two successes on an Intelligence + Occult roll (difficulty 8).
+
+	1:Illuminate the Trail of Prey
+
+	*This ritual causes the path of the subject’s passingto glow in a manner that only the vampire can see.The tracks shine distinctly, but only to the eyes of thecaster. Even airplane trajectories and animal tracksshine with unhealthy light. The ritual is nullified if thetarget wades through or immerses himself in water, orif he reaches the destination of his journey. The castermust burn a length of white satin ribbon that has beenin her possession for at least 24 hours for this ritual totake effect.System: The thaumaturge must have a mental picture of or know the name of her prey. The individual’swake glows with a level of brightness dependent onhow long it has been since he passed that way — oldtracks burn less brightly, while fresh tracks blaze.
+
+	1:Incantation of the Shepherd
+
+	*This ritual enables the caster to mystically locate allmembers of his herd. While intoning the ritual’s vocalcomponent, he spins in a slow circle with a glass objectof some sort held to each of his eyes. At the end of theritual, he has a subliminal sense of the direction anddistance to each of his regular vessels. System: This ritual gives the character the location(relative to him) of every member of his Herd. If hedoes not have the Herd Background, Incantation of theShepherd locates the closest three mortals from whomthe caster has fed at least three times each. This ritualhas a maximum range of 10 miles or 15 kilometers timesthe character’s Herd Background, or five miles (eightkilometers) if he has no points in that Background.
+
+	1:Purity of Flesh
+
+	*The caster cleanses her body of all foreign material with this ritual. To perform it, she meditates onbare earth or stone while surrounded by a circle of 13sharp stones. Over the course of the ritual, the casteris slowly purged of all physical impurities: dirt, alcohol,drugs, poison, bullets lodged in the flesh, and tattooink are equally affected, slowly rising to the surface ofthe caster’s skin and flaking away as a gritty gray filmthat settles within the circle. Any jewelry, makeup, orclothes that the caster is wearing are also dissolved.System: The player spends one blood point beforerolling. Purity of Flesh removes all physical items fromthe caster’s body, but does not remove enchantments,mind control, or diseases of the blood.
+
+	1:Wake with Evening’s Freshness
+
+	*This ritual allows a vampire to awaken at any signof danger, especially during the day. If any potentiallyharmful circumstances arise, the caster immediatelyrises, ready to face the problem. This ritual requires theashes of burned feathers to be spread over the area inwhich the Kindred wishes to sleep.System: This ritual must be performed immediatelybefore the vampire goes to sleep for the day. Any interruption to the ceremonial casting renders the ritual ineffective. If danger arises, the caster awakens and mayignore the Humanity/Path dice pool limit rule for thefirst two turns of consciousness. Thereafter, the penaltytakes effect, but the thaumaturge will have already risen and will be able to address problematic situations.
+
+	1:Widow’s Spite
+
+	*This ritual causes a pain, itch, or other significant(but not deadly) sensation in the subject. Similar ineffect to legendary “voodoo doll” effects, this ritual isused more out of scorn or malice than actual enmity. Infact, it requires a wax or cloth doll that resembles thetarget, which bleeds when the power takes effect. System: The ceremonial doll must resemble, however rudely, the victim of the ritual. It produces no mechanical effect, other than a simple physical stimulus.The caster may determine where on the subject’s bodythe pain or itch appears.
+
+
+
+--Level Two Rituals
+
+	1:Blood Walk
+
+	*A thaumaturge casts this ritual on a blood samplefrom another vampire. Blood Walk is used to trace thesubject’s Kindred lineage and the blood bonds in whichthe subject is involved.System: This ritual requires three hours to cast, reduced by 15 minutes for each success on the roll. Itrequires one blood point from the subject. Each successallows the caster to “see back” one Generation (to alimit of the Fourth Generation — the Third Generation do not give up their secrets so easily), giving thecaster both the true name of the ancestor and an imageof his face. The caster also learns the Generation andClan or bloodline from which the subject is descended.With three successes, the caster also learns the identities of all parties with whom the subject shares a bloodbond, either as regnant or thrall.
+
+	1:Burning Blade
+
+	*Developed during Clan Tremere’s troubled inception, Burning Blade allows a caster to temporarily enchant a melee weapon to inflict unhealable wounds onsupernatural creatures. While this ritual is in effect, theweapon flickers with an unholy greenish flame.System: This ritual can only be cast on melee weapons. The caster must cut the palm of her weapon handduring the ritual — with the weapon if it is edged, otherwise with a sharp stone. This inflicts a single healthlevel of lethal damage, which cannot be soaked butmay be healed normally. The player spends three bloodpoints, which are absorbed by the weapon. Once theritual is cast, the weapon inflicts aggravated damage onall supernatural creatures for the next few successful attacks, one per success rolled. Multiple castings of Burning Blade cannot be “stacked” for longer durations. Furthermore, the wielder of the weapon cannot chooseto do normal damage and “save up” aggravated strikes— each successful attack uses one ag
+gravated strikeuntil there are none left, at which point the weaponreverts to inflicting normal damage.
+
+	1:Donning the Mask of Shadows
+
+	*This ritual renders its subject translucent; her formappears dark and smoky, and the sounds of her footsteps are muffled. While it does not create true invisibility, the Mask of Shadows makes the subject muchless likely to be detected by sight or hearing.System: This ritual may be simultaneously cast on anumber of subjects equal to the caster’s Occult rating;each individual past the first adds five minutes to thebase casting time. Individuals under the Mask of Shadows can only be detected if the observer possesses apower (such as Auspex) sufficient to penetrate Obfuscate 3. The Mask of Shadows lasts a number of hoursequal to the number of successes rolled when it is castor until the caster voluntarily lowers it.
+
+	1:Eyes of the Night Hawk
+
+	*This ritual allows the vampire to see through theeyes of a bird, and to hear through its ears. The bird chosen must be a predatory bird, and the vampire musttouch it when initiating this ritual. At the end of thisritual, the caster must put out the bird’s eyes, or sufferblindness herself.System: The vampire is able to mentally controlwhere the bird travels for the duration of the ritual.The bird will not necessarily perform any other actionthan flight — the caster cannot command it to fight,pick up and return an object, or scratch a target. Thebird returns to the vampire after finishing its flight. Ifthe vampire does not put out the bird’s eyes, she suffersa three-night period of blindness. This ritual ceases effect at sunrise.
+
+	1:Machine Blitz
+
+	*Machines go haywire when this ritual is cast. Ittakes effect instantly and lasts as long as the vampireconcentrates on it. This ritual may be used to kill carengines, erase flash drives, drain the battery of a cellphone, stop life-support machines, et cetera. Essentially, Machine Blitz stops any machine more complexthan a rope-and-pulley. The thaumaturge must have ascrap of rusted metal in her possession for this ritual towork, though some vampires use a variant that requiresa knot steeped in human saliva to be untied. System: This ritual only stops machines; it does notgrant any control over them. The effects of this ritualare invisible and appear to be coincidental.
+
+	1:Principal Focus of Vitae Infusion
+
+	*This ritual imbues a quantity of blood within anobject small enough for the vampire to carry in bothhands. (The object may not be any larger than this,though it may be as small as a dime.) After the ritualis conducted, the object takes on a reddish hue andbecomes slick to the touch. At a mental command, thecaster may release the object from its enchantment,causing it to break down into a pool of blood. Thisblood may serve whatever purpose the vampire desires;many thaumaturges wear enchanted baubles to ensurethey have emergency supplies of vitae.System: An object may store only one blood point ofvitae. If a Kindred wishes to make an infused focus foran ally, she may do so, but the blood contained withinmust be her own. (If the ally then drinks the blood, heis one step closer to the blood bond). The ally must bepresent at the creation of the focus.
+
+	1:Recure of the Homeland
+
+	*The vampire calls on the power of the earth to healgrave wounds she may have received. The thaumaturgemust use at least a handful of dirt from the city or townof her mortal birth and recite a litany of her mortalfamily tree as she casts this ritual.System: The Cainite must mix the earth with twopoints of her own blood to make a healing paste. Onehandful will heal one aggravated wound, and only onehandful can be used per night. This ritual can only beused on the vampire who knows it.
+
+	1:Ward Versus Ghouls
+
+	*Wary Tremere created this ritual to protect themselves from the minions of vengeful rivals. By invokingthis ritual, the caster creates a glyph that causes greatpain to any ghouls who come in contact with it. TheKindred pours a point’s worth of blood over the object he wishes to ward (a piece of parchment, a coin,a doorknob, etc.), and recites the incantation, whichtakes 10 minutes. In 10 hours, the magical ward is complete, and will inflict excruciating pain on any ghoulunfortunate enough to touch the warded object.System: Ghouls who touch warded objects sufferthree dice of lethal damage. This damage occurs againif the ghoul touches the object further; indeed, a ghoulwho consciously wishes to touch a warded object mustspend a point of Willpower to do so. This ritual wards only one object — if inscribed onthe side of a car, the ward affects only that door orfender, not the whole car. Wards may be placed onweapons, even bullets, though this usually works beston small-caliber weapo
+ns. Bullets often warp upon firing, however, and for a ward to remain intact on a firedround, the player needs five successes on the Firearmsroll.
+
+	1:Warding Circle versus Ghouls
+
+	*This ritual is enacted in a manner similar to that ofWard versus Ghouls, but creates a circle centered onthe caster into which a ghoul cannot pass without being burned. The circle can be made as large and as permanent as the caster desires, as long as she is willing topay the necessary price. Many Tremere chantries andhavens are protected by this and other Warding Circlerituals.System: The ritual requires three blood points ofmortal blood. The caster determines the size of thewarding circle when it is cast; the default radius is 10feet/3 meters, and every 10-foot/3-meter increase raisesthe difficulty by one, to a maximum of 9 (one additional success is required for every increase past the numbernecessary to raise the difficulty to 9). The player spendsone blood point for every 10 feet/3 meters of radius androlls. The ritual takes the normal casting time if it is tobe short-term (lasting for the rest of the night) or onenight if it is to be long-term (lasting a year and a day).Once t
+he warding circle is established, any ghoulwho attempts to cross its boundary feels a tingle on his skin and a slight breeze on his face — a successful Intelligence + Occult roll (difficulty 8) identifies this asa warding circle. If the ghoul attempts to press on, hemust roll more successes on a Willpower roll (difficultyof the caster’s Thaumaturgy rating + 3) than the casterrolled when establishing the ward. Failure indicatesthat the ward blocks his passage and inflicts three diceof bashing damage, and his next roll to attempt to enter the circle is at +1 difficulty. If the ghoul leaves thecircle and attempts to enter it again, he must repeatthe roll. Attempts to leave the circle are not blocked.
+
+
+
+---Level Three Rituals
+
+	1:Clinging of the Insect
+
+	*This ritual allows the caster to cling to walls or ceilings, as would a spider. She may even crawl along thesesurfaces (as long as they can support her). Use of thispower seriously discomfits mortal onlookers. The character must place a live spider under her tongue for theduration of the ritual (though the spider may die whilein the thaumaturge’s mouth without canceling thepower).System: The character may move at half her normal rate while climbing walls or ceilings. This powerlasts for one scene, or until the vampire spits out thespider.
+
+	1:Flesh of Fiery Touch
+
+	*This defensive ritual inflicts painful burns on anyonewho deliberately touches the subject’s skin. It requiresthe subject to swallow a small glowing ember, whichdoes put off some vampires with low pain thresholds.Some vain thaumaturges use this ritual purely for itssubsidiary effect of darkening the subject’s skin to ahealthy sun-bronzed hue.System: Flesh of Fiery Touch takes two hours to cast(reduced by 10 minutes per success). It requires a smallpiece of wood, coal, or other common fuel source,which ignites and is swallowed at the end of the ritual.The subject who swallows the red-hot ember receivesa single aggravated health level of damage (difficulty 6to soak with Fortitude). Until the next sunset, anyonewho touches the subject’s flesh receives a burn that inflicts a single aggravated health level of damage (again,difficulty 6 to soak with Fortitude). The victim mustvoluntarily touch the subject; this damage is not inflicted if the victim is touched or accidentally comes i
+ncontact with the subject. This ritual darkens the subject’s skin to that whichwould be obtained by long-term exposure to the sun ina mortal. The tone is slightly unnatural and metallic,and is clearly artificial to any observer who succeeds ina Perception + Medicine roll (difficulty 8).
+
+	1:Incorporeal Passage
+
+	*Use of this ritual allows the thaumaturge to makeherself insubstantial. The caster becomes completelyimmaterial and thus is able to walk through walls, passthrough closed doors, escape manacles, etc. The casteralso becomes invulnerable to physical attacks for theduration of the ritual. The caster must follow a straightpath through any physical objects, and may not drawback. Thus, a Kindred may walk through a solid wall,but may not walk down through the earth (as it wouldbe impossible to reach the other side before the rituallapsed). This ritual requires that the caster carry a shardfrom a shattered mirror to hold her image.System: This ritual lasts a number of hours equal tothe number of successes scored on a Wits + Survivalroll (difficulty 6). The caster may prematurely end theritual (and, thus, her incorporeality) by turning themirror shard away so that it no longer reflects her image.
+
+	1:Mirror of Second Sight
+
+	*This object is an oval mirror no less than four inches(10 cm) wide and no more than 18 inches (45 cm) inlength. It looks like a normal mirror, but once created,the vampire can use it to see the supernatural: It reflects the true form of Lupines and faeries, and enablesthe owner to see ghosts as they move though the Underworld. The caster creates the mirror by bathing anordinary mirror in a quantity of her own blood whilereciting a ritual incantation.System: The ritual requires one point of the vampire’s blood. Thereafter, the mirror reflects images ofother supernatural creatures’ true forms — werewolvesappear in their hulking man-wolf shapes, magi glow ina scintillating nimbus, ghosts become visible (in themirror), and so on. Sometimes, the mirror also revealsthose possessed of True Faith in clouds of golden light.
+
+	1:Pavis of Foul Presence
+
+	*The Tremere joke privately that this is their “ritualfor the Ventrue.” Kindred who invoke the PresenceDiscipline on the subject of this ritual find the effects oftheir Discipline reversed, as if they had used the poweron themselves. For example, a vampire using Presenceto instill fear in a Kindred under the influence of this ritual feels the fear herself; a vampire summoning thecaster is instead drawn to the thaumaturge’s location.This ritual is an unbroken secret among the Tremere,and the Warlocks maintain that its use is unknownoutside their Clan. The magical component for thisritual is a length of blue silken cord, which must beworn around the caster’s neck.System: This ritual lasts against a number of effectsequal to the successes rolled, or until the sunrise after it is enacted. Note that the Presence Disciplinepower must actually succeed before being reversed bythe ritual. As such, only powers that specifically targetthe caster (and thus, require a roll to succeed) can
+ bereversed — “passive” powers such as Majesty are notaffected.
+
+	1:Sanguine Assistant
+
+	*Thaumaturges often need laboratory assistants whomthey can trust implicitly. This ritual allows the intrepidvampire to conjure a temporary servant. To cast theritual, the thaumaturge slices open his arm and bleedsinto a specially prepared earthen bowl. The ritual sucksin and animates whatever random unimportant itemsthe wizard happens to have lying around his workshop— glass beakers, dissection tools, pencils, crumpled papers, semiprecious stones — and binds the materialstogether into a small humanoid form animated by thepower of the ritual and the blood. Oddly enough, thisritual almost never takes in any tool that the casterfinds himself needing during the assistant’s lifespan,nor does it take the physical components of any otherritual nor any living thing. The servant has no personality to speak of at first, but gradually adopts themannerisms and thought processes that the thaumaturge desires in an ideal servant. Sanguine Assistantsare temporary creations, but some vampires 
+becomefond of their tiny accomplices and create the same onewhenever the need arises.System: The player spends five blood points androlls. The servant created by the ritual stands a foot(30 cm) high and appears as a roughly humanoid shapecomposed of whatever the ritual sucked in for its ownuse. It lasts for one night per success rolled. At the endof the last night, the assistant crawls into the bowl usedfor its creation and falls apart. The assistant can be reanimated through another application of this ritual; ifthe caster so desires, it re-forms from the same materials with the same memories and personality.A Sanguine Assistant has Strength and Stamina of1, and Dexterity and Mental Attributes equal to those of the caster. It begins with no Social Attributes tospeak of, but gains one dot per night in Charisma andManipulation until its ratings are equal to those of thecaster. It has all of the caster’s Abilities at one dot lower than his own. A Sanguine Assistant is a naturallytimid
+ creature and flees if attacked, though it will try todefend its master’s life at the cost of its own. It has noDisciplines of its own, but has a full understanding ofall of its master’s Thaumaturgical knowledge and caninstruct others if so commanded. A Sanguine Assistantis impervious to any mind-controlling Disciplines ormagic, so completely is it bound to its creator’s will.
+
+	1:Shaft of Belated Quiescence
+
+	*This ritual turns an ordinary stake of rowan woodinto a particularly vicious weapon. When the stakepenetrates a vampire’s body, the tip breaks off and begins working its way through the victim’s flesh to hisheart. The trip may take several minutes or severalnights, depending on where the stake struck. The stakeeludes attempts to dig it out, burrowing farther into thevictim’s body to escape surgery. The only Kindred whoare immune to this internal attack are those who havehad their hearts removed by Serpentis.System: The ritual takes five hours to enact, minus30 minutes per success. The stake must be carved ofrowan wood, coated with three blood points of thecaster’s blood, and blackened in an oak-wood fire.When the ritual is complete, the stake is enchanted toact as described above.An attack with a Shaft of Belated Quiescence is performed as with a normal stake: a Dexterity + Meleeroll (difficulty 6, modified as per the normal combatrules; the attack does not need to specifica
+lly target theheart) with a lethal damage rating of Strength + 1. Ifat least one health level of damage is inflicted after thetarget rolls to soak, the tip of the stake breaks off andbegins burrowing. If not, the stake may be used to makesubsequent attacks until it strikes deep enough to activate.Once the tip of the stake is in the victim’s body, theStoryteller begins an extended roll of the caster’s Thaumaturgy rating (difficulty 9), rolling once per hour ofgame time. Successes on this roll are added to the successes scored in the initial attack. This represents thetip’s progress toward the victim’s heart. A botch indicates that the tip has struck a bone and all accumulatedsuccesses are lost (including those from the initial attack roll). Removing the part of the body where the tipimpacted (such as a Tzimisce turning into blood or a vampire cutting off their arm) may stop the tip’s progress, depending on the number of successes acquiredand the Storyteller’s discretion. Wh
+en the shaft accumulates a total of 15 successes, it reaches the victim’sheart. This paralyzes Kindred and is instantly fatal tomortals and ghouls.Attempts to surgically remove the tip of the shaftcan be made with an extended Dexterity + Medicineroll made once per hour (difficulty 7 for Kindred and 8for mortals). The surgeon must accumulate a numberof successes equal to those currently held by the shaftin order to remove the tip. Once surgery begins, however, the shaft begins actively evading the surgeon’sprobes, and its rolls are made once every 30 minutes forthe duration of the surgery attempt. Each individualsurgery roll that scores less than three successes inflictsan additional unsoakable level of lethal damage on thepatient.Shaft of Belated Quiescence may be performed onother wooden impaling weapons, such as spears, arrows, practice swords, and pool cues, provided thatthey are made of rowan wood. It may not, however,create a Bullet of Belated Quiescence.
+
+	1:Ward versus Lupines
+
+	*This wards an object in a manner identical to that ofthe Level Two ritual Ward Versus Ghouls, except thatit affects werewolves.System: Ward versus Lupines behaves exactly as doesWard versus Ghouls, but it affects werewolves ratherthan ghouls. The ritual requires a handful of silver dustrather than a blood point.
+
+
+
+--Level Four Rituals
+
+	1:Bone of Lies
+
+	*This ritual enchants a mortal bone so that anyonewho holds it must tell the truth. The bone in questionis often a skull, though any part of the skeleton willdo — some casters use strings of teeth, necklaces offinger joints, or wands fashioned from ribs or arms. Thebone grows blacker as it compels its holder to tell thetruth, until it has turned completely ebony and has nomagic left.This ritual binds the spirit of the individual to whomthe bone belonged in life; it is this spirit who wreststhe truth from the potential liar. The spirit absorbsthe lies intended to be told by the bone’s holder, andas it compels more truth, it becomes more and morecorrupt. If summoned forth, this spirit reflects the sins it has siphoned from the defeated liar (in addition toanger over its unwilling servitude). For this reason,anonymous bones are often used in the ritual, and thebone is commonly buried after it has been used to itsfull extent. A specific bone may never be used twicefor this ritual, th
+ough different bones from the samecorpse can.System: The bone imbued with this magical powermust be at least 200 years old and must absorb 10 bloodpoints on the night that the ritual is cast. Each liethe holder wishes to tell consumes one of these bloodpoints, and the holder must speak the truth immediately thereafter. When all 10 blood points have beenconsumed, the bone’s magic ceases to work.
+
+	1:Firewalker
+
+	*This ritual imbues the vampire with an unnatural resistance to fire. Only a foolish vampire would actuallyattempt to walk on or through fire, but this ritual doesgrant an advanced tolerance to flame. Some Sabbat usethis ritual to show off, while other thaumaturges useit only for martial concerns. To enact the ritual, thecaster must cut off the end of one of his fingers andburn it in a Thaumaturgical circle.System: Cutting off one’s finger does not do anyhealth levels of damage, but it hurts like hell and requires a Willpower roll to perform. This ritual may becast on other vampires (at the expense of the caster’sfingertips...). If the subject has no Fortitude, he maysoak fire with his Stamina for the duration of this ritual. If the vampire has Fortitude, he may soak fire withhis Stamina + Fortitude for the duration of the ritual.This ritual lasts one hour.
+
+	1:Heart of Stone
+
+	*A vampire under the effect of this ritual experiencesthe transformation suggested by the ritual’s name: hisheart is completely transmuted to solid rock, rendering him virtually impervious to staking. The subsidiaryeffects of the transformation, however, seem to followthe Hermetic laws of sympathetic magic: The vampire’s emotional capacity becomes almost nonexistent,and his ability to relate to others suffers as well.System: This ritual requires nine hours (reduced byone hour for every success). It can only be cast on oneself. The caster lies naked on a flat stone surface andplaces a bare candle over his heart. The candle burnsdown to nothing over the course of the ritual, causingone aggravated health level of damage (difficulty 5 tosoak with Fortitude). At the end of the ritual, the caster’s heart hardensto stone. The caster gains a number of additional diceequal to twice his Thaumaturgy rating to soak any attack that aims for his heart and is completely impervious to the effe
+cts of a Shaft of Belated Quiescence (seep. 237). Additionally, the difficulty to use all Presenceor other emotionally manipulative powers on him isincreased by three due to his emotional isolation. Thedrawbacks are as follows: the caster’s Conscience/Conviction and Empathy scores drop to 1 (or to 0 if theyalready were at 1) and all dice pools for Social rolls except those involving Intimidation are halved (including those required to use Disciplines). All Merits thatthe character has pertaining to positive social interaction are neutralized. Heart of Stone lasts as long as thecaster wishes it to.
+
+	1:Splinter Servant
+
+	*Another ritual designed to enchant a stake, SplinterServant is a progressive development of Shaft of Belated Quiescence. (The two rituals, however, are mutually exclusive.) A Splinter Servant consists of a stakecarved from a tree which has nourished itself on thedead. The stake must be bound in wax-sealed nightshade twine. When the binding is torn off, the Splinter Servant leaps to life, animating itself and attackingwhomever the wielder commands — or the wielder, ifshe is too slow in assigning a target. The servant splitsitself into a roughly humanoid form and begins singlemindedly trying to impale the target’s heart. Its exertions tear it apart within a few minutes, but if it piercesits victim’s heart before it destroys itself, it is remarkably difficult to remove, as pieces tend to remain behind if the main portion is yanked out.System: The ritual requires 12 hours to cast, minus one per success, and the servant must be createdas described above. When the binding is torn of
+f, thecharacter who holds it must point the servant at itstarget and verbally command it to attack during thesame turn. If this command is not given, the servantattacks the closest living or unliving being, usually theunfortunate individual who currently carries it.A Splinter Servant always aims for the heart. It hasan attack dice pool of the caster’s Wits + Occult, adamage dice pool of the caster’s Thaumaturgy rating,and a maximum movement rate of 30 yards or metersper turn. Note that these values are those of the casterwho created the servant, not the individual who activates it. A Splinter Servant cannot fly, but can leapits full movement rating every turn. Every action ittakes is to attack or move toward its target; it cannot dodge or split its dice pool to perform multiple attacks.The servant makes normal stake attacks that aim forthe heart (difficulty 9), and its success is judged as perthe rules for a normal staking (see p. 280). A SplinterServant has three health levels, a
+nd attacks directedagainst it are made at +3 difficulty due to its small sizeand erratic movement patterns.A Splinter Servant has an effective life of five combat turns per success rolled in its creation. If it has notimpaled its victim by the last turn of its life, the servantcollapses into a pile of ordinary, inanimate splinters.Three successes on a Dexterity roll (difficulty 8) arerequired to remove a Splinter Servant from a victim’sheart without leaving behind shards of the stake.
+
+	1:Ward versus Kindred
+
+	*This warding ritual functions exactly as do Wardversus Ghouls and Ward versus Lupines, but it inflictsinjury upon Cainites.System: Ward versus Kindred behaves exactly asdoes Ward versus Ghouls, but it affects vampires ratherthan ghouls. The ritual requires a blood point of thecaster’s own blood and does not affect the caster.
+
+
+
+--Level Five Rituals
+
+	1:Blood Contract
+
+	*This ritual creates an unbreakable agreement between the two parties who sign it. The contract mustbe written in the caster’s blood and signed in the bloodof whoever applies their name to the document. Thisritual takes three nights to enact fully, after which bothparties are compelled to fulfill the terms of the contract.System: This ritual is best handled by the Storyteller, who may bring those who sign the blood contractinto compliance by whatever means necessary (it isnot unknown for demons to materialize and enforceadherence to certain blood contracts). The only wayto terminate the ritual is to complete the terms of thecontract or to burn the document itself — attempts toadd a clause forbidding burning the contract have resulted in the contract spontaneously combusting uponcompletion of the ritual. One blood point is consumedin the creation of the document, and an additionalblood point is consumed by those who sign it.
+
+	1:Enchant Talisman
+
+	*This ritual is the first taught to most Tremere oncethey have attained mastery of their first path. Create Talisman allows the caster to enchant a personal magical item (the fabled wizard’s staff) to act as an amplifierfor her will and thaumaturgical might. Many talismansare laden with additional rituals (such as every wardknown to the caster). The physical appearance of atalisman varies, but it must be a rigid object close toa yard or a meter long. Swords and walking sticks arethe most common talismans, but some innovative oreccentric thaumaturges have enchanted violins, shotguns, pool cues, and classroom pointers.System: This ritual requires six hours per night forone complete cycle of the moon, beginning and endingon the new moon. Over this time, the vampire carefully prepares her talisman, carving it with Hermeticrunes that signify her true name and the sum total ofher thaumaturgical knowledge. The player spends oneblood point per night and makes an extended roll ofIntelligenc
+e + Occult (difficulty 8), one roll per week.If a night’s work is missed or if the four rolls do notaccumulate at least 20 net successes, the talisman isruined and the process must be begun again.A completed talisman gives the caster several advantages. When the character is holding the talisman, thedifficulty of all magic that targets her is increased byone. The player receives two extra dice when rollingfor uses of the character’s primary path and one extradie when rolling for the character’s ritual castings. Ifthe talisman is used as a weapon, it gives the playeran additional die to roll to hit. If the thaumaturge isseparated from her talisman, a successful Perception +Occult roll (difficulty 7) gives her its location.If a talisman is in the possession of another individual, it gives that individual three additional dice to rollwhen using any form of magic against the talisman’sowner. At the Storyteller’s discretion, rituals that target the caster and use her talisman as 
+a physical component may have greatly increased effects.A thaumaturge may only have one talisman at atime. Ownership of a talisman may not be transferred— each individual must create her own.
+
+	1:Escape to a True Friend
+
+	*Escape to a True Friend allows the caster to travel tothe person whose friendship and trust she most values.The ritual has a physical component of a yard-wide/meter-wide circle charred into the bare ground orfloor. The caster may step into the circle at any timeand speak the true name of her friend. She is instantlytransported to that individual, wherever he may be atthe moment. She does not appear directly in front of him, but materializes in a location within a few minutes’ walk that is out of sight of any observer. The circlemay be reused indefinitely, as long as it is unmarred.System: This ritual takes six hours a night for sixnights to cast, reduced by one night for every two successes. Each night requires the sacrifice of three of thecaster’s own blood points, which are poured into thecircle. Once the circle is complete, the transport maybe attempted at any time. The caster may take oneother individual with her when she travels, or a maximum amount of “cargo” equal to 
+her own weight.
+
+	1:Paper Flesh
+
+	*This dreadful ritual enfeebles the subject, makingher skin brittle and weak. Humors rise to the surfaceand flesh tightens around bones and scales away at theslightest touch. Used against physically tough opponents, this ritual strips away the inherent resilience ofthe vampiric body, leaving it a fragile, dry husk. Thethaumaturge must inscribe his subject’s true name(which is much harder to discern for elders than it isfor young vampires) on a piece of paper, which he usesto cut himself and then burns to cinders.System: This ritual causes the subject’s Stamina andFortitude (if any) to drop to 1 each. For every Generation below Eighth, the subject retains one extra pointof Stamina or Fortitude (keeping Fortitude first, thoughshe may not exceed her original scores). For example, avampire of the Fourth Generation with Fortitude targeted by Paper Flesh would drop to a Stamina + Fortitude score of 6 (assuming the score was 6 or more tobegin with). This ritual lasts one night.
+
+	1:Ward versus Spirits
+
+	*This warding ritual functions exactly as Ward versusGhouls, but it inflicts injury upon spirits. Several otherversions of this ward exist, each geared toward a particular type of non-physical being.System: Ward versus Spirits behaves exactly as doesWard versus Ghouls, but it affects spirits (including thosesummoned or given physical form by Thaumaturgy Pathssuch as Elemental Mastery). The material componentfor Ward versus Spirits is a handful of pure sea salt.The other versions of this ward, also Level Five rituals, are Ward versus Ghosts and Ward versus Demons.Each of these three Level Five wards affects its respective target on both the physical and spiritual planes.Ward versus Ghosts requires a handful of powderedmarble from a tombstone, while Ward versus Demonsrequires a vial of holy water.
+
+
+
+
+
+
+
+#########################################################################################################################################################################################################################################################
+
