@@ -1,15 +1,19 @@
 #include "MiniProjet.h"
 #include <gtkmm/application.h>
 
+
 int main(int argc, char *argv[])
 {
   
-  auto app = Gtk::Application::create(argc, argv);
+  Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+  
   
   Fenetre f;
  
  
-  app->run(f.window);
+  return app->run(f);
   //On l'affiche, l'exécute
-  return 0;
+  
 }
+
+

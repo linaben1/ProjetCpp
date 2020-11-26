@@ -51,6 +51,11 @@ int main() {
 
 
 
+
+
+
+
+
 #include <iostream> 
 #include <stdio.h>
 #include <fstream>
@@ -81,7 +86,7 @@ int main(){
 	
  	string line;
 
- 	fstream fichier("file_part2.txt");
+ 	fstream fichier("background.txt");
 	if ( !fichier ) cout << "fichier inexistant";
 	else {	
 		while(!fichier.eof())

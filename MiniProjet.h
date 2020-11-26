@@ -133,26 +133,6 @@ class Abilities
 };
 
 
-
-/********************************************************************************************************/
-
-
-
-class DistributionPoints
-{
-	protected:
-		int nbPointsFree;
-		int nbPointsExperience;
-		
-	public:
-		void InitAdvantages();
-		int GetExperience(int);
-		void setExperience(int);
-		void changeFreePoints(string);
-		void changeExperrience();
-};
-
-
 /********************************************************************************************************/
 class OtherTraits
 {
@@ -177,7 +157,9 @@ class OtherTraits
 		vector <int> valueMeritsAndFlaws;
 
 	public:
-		void InitTraits();
+
+		deque<string> background_list();
+		void InitTraits();		
 		void SetBackground(string, int);
 		void setVirtuesPoints(string, int);
 		int getVirtuesPoints();
@@ -187,6 +169,26 @@ class OtherTraits
 		void setHumanity();
 		void setWillPower();
 };
+
+/********************************************************************************************************/
+
+
+
+class DistributionPoints
+{
+	protected:
+		int nbPointsFree;
+		int nbPointsExperience;
+		
+	public:
+		void InitAdvantages();
+		int GetExperience(int);
+		void setExperience(int);
+		void changeFreePoints(string);
+		void changeExperrience();
+};
+
+
 
 
 /********************************************************************************************************/
@@ -204,19 +206,38 @@ class Personnage : public Clan, Attributes, Abilities, OtherTraits, Distribution
 };
 
 
-class Fenetre : public Gtk::Window {
+class Fenetre : public Gtk::Window
+{
     public :
-    	Gtk::Window window;
+ 
         Fenetre();
         virtual ~Fenetre(); //Le destructeur pour pouvoir détruire le bouton.
 	void on_combo_changed();
 	void next_button_clicked();
 	void next1_button_clicked();
-    
+	
+	
     
     protected :
-         Gtk::Grid mainGrid; //Création du pointeur sur bouton.
+    
+	//Image en background    	  
+  	Gtk::Image image;
+
+    	//Les différents GRIDs 
+        Gtk::Grid mainGrid, mainGrid2, mainGrid3; //Création du pointeur sur bouton.
         
+        //BOX
+        Gtk::VBox boxV;
+        
+        //Note Button
+	 Gtk::Notebook pages;
+	 
+	 
+	 //Note Button 
+	Gtk::Button back, forward;
+	Gtk::HButtonBox boiteBoutons;
+
+	
 	//Clan
 	 Gtk::Label clanName_label;	 
 	 Gtk::ComboBoxText Clan_combo;
@@ -249,15 +270,7 @@ class Fenetre : public Gtk::Window {
           //Sire (le sire du personnage)
          Gtk::Label sire_label;
          Gtk::Entry sire_entry;
-     	  
-     
-     	  //Discipline
-     	 multimap<string, string > discipl_list;
-     	 Gtk::Label disciplines_label;
-
-         Gtk::SpinButton spin_discipl1, spin_discipl2, spin_discipl3;         
-         Gtk::Label discipl1_label, discipl2_label, discipl3_label;
-    
+     	      
     	 //Haven 
     	 Gtk::Label haven_label, haven_location_label, haven_description_label;
     	 Gtk::Entry location_entry;
@@ -282,11 +295,29 @@ class Fenetre : public Gtk::Window {
 	//Abilities	
 	Gtk::Label abilities_label, talents_label, alertness_label, athletics_label, awareness_label, brawl_label, empathy_label, expression_label, intimidation_label, leadership_label, streetwise_label, subterfuge_label,  skills_label, animalKen_label, crafts_label, drive_label, etiquette_label, firearms_label, larceny_label, melee_label, performance_label, stealth_label, survival_label,  knowledges_label, academics_label, computer_label, finance_label, investigation_label, law_label, medicine_label, occult_label, politics_label, science_label, technology_label;
 	
+	
 	Gtk::SpinButton spin_abilities, spin_talents, spin_alertness, spin_athletics, spin_awareness, spin_brawl, spin_empathy, spin_expression, spin_intimidation, spin_leadership, spin_streetwise, spin_subterfuge,  spin_skills, spin_animalKen, spin_crafts, spin_drive, spin_etiquette, spin_firearms, spin_larceny, spin_melee, spin_performance, spin_stealth, spin_survival, spin_knowledges, spin_academics, spin_computer, spin_finance, spin_investigation, spin_law, spin_medicine, spin_occult, spin_politics, spin_science, spin_technology;
     	 
-	//Button
-	Gtk::Button next_button; 
+    	 //Advantages
+    	 Gtk::Label advantages_label, background_label;
+    	 
+    	 
+    	 //**Discipline
+     	 multimap<string, string > discipl_list;
+     	 Gtk::Label disciplines_label;
 
+         Gtk::SpinButton spin_discipl1, spin_discipl2, spin_discipl3;         
+         Gtk::Label discipl1_label, discipl2_label, discipl3_label;
+
+    	 //**Background 
+	 Gtk::ComboBoxText background1_combo, background2_combo, background3_combo;
+	 deque<string> backgroundName_list;
+
+    	 
+    	 
+    	 //**Virtues
+    	
+	
 };
 
 
