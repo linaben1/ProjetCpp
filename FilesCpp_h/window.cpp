@@ -643,13 +643,13 @@ void Fenetre::on_combobackground3_changed() //Signal du changement de la combobo
 
 void Fenetre::create_button_clicked() //Signal du changement de la combobox
 {
-	//Récupération des signaux 
+/*	//Récupération des signaux 
 	string text_pointattributs = DistributionPointsAttribut_combo.get_active_text();
 	string text_pointabilities = DistributionPointsAbilities_combo.get_active_text();
 	string text_clanname = Clan_combo.get_active_text();
-		
+*/		
 	int condition_total = 10 ;
-	//Verification si le joueur a bien sélectionné un nom de clan et les combinaison nécéssaire pour les attribution des points 
+/*	//Verification si le joueur a bien sélectionné un nom de clan et les combinaison nécéssaire pour les attribution des points 
 	if(text_clanname == "" || text_pointabilities == "" || text_pointattributs == "" )
 	{
 		condition_total-- ;
@@ -730,21 +730,33 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		dialog.run();	
  		condition_total--;	
  	}
-	
-	
+		
 	if(condition_total != 10)
 	{
 		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
 		dialog.run();	
 	}
-	
+*/	
 	if(condition_total == 10)
 	{
 		//Récupération des info rentrer par le joueur 
-		//string nomJ = player_entry.get_text();
+		string nomP = name_entry.get_text();
+		string nomJ = player_entry.get_text();
+		string chronic  = chronicle_entry.get_text();
+		string nature = nature_combo.get_active_text();
+		string demeanor = demeanor_combo.get_active_text();
+		string concepte = concept_entry.get_text();
+		string nomC = Clan_combo.get_active_text();
 		
 		//Envoie les information a notre classe personnage
-		//personnage.setNomPersonnage(nomJ);
+		personnage.setNomPersonnage(nomP);	// nom du personnage 
+		clan.SetPlayername(nomJ); // nom du joueur 
+		personnage.setChronicle(chronic); // la chronicle 
+		clan.SetNature_and_Demeanor(nature); //la nature du personnage
+		clan.SetNature_and_Demeanor(demeanor); //demeanor du personnage
+		personnage.setConcept(concepte); //le concept du personnage 
+		clan.SetClanName(nomC); //nom du clan 
+		
 		
 		Feuille_Vampire.show(); 
 		
@@ -755,7 +767,7 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 
 ///////////////////////////////////////////////
 
-//Fenetre_Vampire
+//Ajout de la Fenetre_Vampire
 Fenetre_Vampire::Fenetre_Vampire(): monImage("Images/Vampire.jpg") 
 {
 	set_title(" Vampire ");
@@ -773,39 +785,60 @@ Fenetre_Vampire::~Fenetre_Vampire()
 {
 }
 
-DrawImage::DrawImage(const std::string& file)
+DrawImage::DrawImage(const string& file)
 {
-    try{
-        monImage = Gdk::Pixbuf::create_from_file(file);
-    }catch(...)
-    {
-    std::cerr<<"An error occured while loading the image file."<<std::endl;
-    }
+	try
+	{
+		monImage = Gdk::Pixbuf::create_from_file(file);
+	}catch(...)
+	{
+		cerr<<"An error occured while loading the image file."<< endl;
+	}
 
-    if(monImage)
-        set_size_request(monImage->get_width(), monImage->get_height());
-    set_halign(Gtk::ALIGN_CENTER);
-    set_valign(Gtk::ALIGN_CENTER);
+	if(monImage)
+	{
+		set_size_request(monImage->get_width(), monImage->get_height());
+		set_halign(Gtk::ALIGN_CENTER);
+		set_valign(Gtk::ALIGN_CENTER);
+	}
 }
 
 DrawImage::~DrawImage()
 {
 }
+//Dessiner sur la fiche du personnage 
 bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 {
+	//Récupération de tous les choix du joueur 
+	
+	string name = personnage.getNomPersonnage();	// nom du personnage 
+	string player = clan.GetPlayername(); // nom du joueur 
+	string chron = personnage.getChronicle(); // la chronicle 
+	string nat = clan.GetNature_and_Demeanor(); //la nature du personnage
+	string dem = clan.GetNature_and_Demeanor(); //demeanor du personnage
+	string conc = personnage.getConcept(); //le concept du personnage 
+	string cla =  clan.GetClanName(); //nom du clan 
+		     
+	if(!monImage)
+	{
+        	return false;
+	}
 	Gtk::Allocation allocation = get_allocation();
-    const int height = allocation.get_height();
-    const int width = allocation.get_width();
+	const int height = allocation.get_height();
+	const int width = allocation.get_width();
+	Gdk::Cairo::set_source_pixbuf(cr, monImage, width-monImage->get_width(), height-monImage->get_height());
+	cr->paint();
 
-Gdk::Cairo::set_source_pixbuf(cr, monImage, width-monImage->get_width(), height-monImage->get_height());
-
-    cr->paint();
-
-
-    Gdk::Cairo::set_source_pixbuf(cr, monImage, width-monImage->get_width(), height-monImage->get_height());
-
-    cr->set_source_rgb(0.0, 0.0, 0.0); // set la couleur du texte; ici noir
-
+	Gdk::Cairo::set_source_pixbuf(cr, monImage, width-monImage->get_width(), height-monImage->get_height());
+	cr->set_source_rgb(1, 0.0, 0.0); 
+	draw_text(cr, 368 , 275 , name);
+	draw_text(cr, 368 , 313 , player);
+	draw_text(cr, 368 , 351 , chron);
+	draw_text(cr, 468 , 275 , nat);
+	draw_text(cr, 600 , 900 , dem);
+	draw_text(cr, 700 , 900 , conc);
+	draw_text(cr, 800 , 900 , cla);	
+	
 	return true;
 	
 	
@@ -864,66 +897,5 @@ void DrawImage::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int rectangle
      	*/
      	
   
-
-
-
-/*
-void next_button_clicked {
-
-
-
-
-
-	string choosen = sex_combo.get_active_text() 
-	Clan.name(sex)
-	
-	Player.RandomName(choosen_race, choosen_sex);
-    Glib::ustring random_name = Player.getNomPerso();
-    
-      Player.setSexe(choosen_sex);
-
-
-}
-
-bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
-{
-
-    string name = Player.getNomPerso();
-    string classe = Player.getChoixClasse();
-    string race = Player.getChoixRace();
-    string sexe = Player.getSexe();
-}
-
-*/    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

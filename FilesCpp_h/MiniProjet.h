@@ -42,16 +42,16 @@ class Fenetre;
 class Clan
 {
 	protected:
-		string clanName;						/// Nom du clan de votre vampire, sera la liste 		
-		string playername;						/// Surnom du clan (Assasins)
-		string background;						/// Passe commun des membres de votre clan
-		string sect;							/// Secte a laquelle les vampires de votre clan appartient habituellement	
-		string haven;							///
-		string appearance;						///
+		string clanName;						// Nom du clan de votre vampire, sera la liste 		
+		string playername;						// Nom du clan (Assasins)
+		string background;						// Passe commun des membres de votre clan
+		string sect;							// Secte a laquelle les vampires de votre clan appartient habituellement	
+		string haven;							//
+		string appearance;						//
 		string character;
-		int nbPointsDisciplines;					/// Nombre de points a distribuer dans les disciples
-		vector <string> disciplines;					/// Tableau de nom des disciplines choisies, unique a chaque clan 
-		vector <int> valueDisciples;					/// Tableau des points investits dans la disciplines choisi
+		int nbPointsDisciplines;					// Nombre de points a distribuer dans les disciples
+		vector <string> disciplines;					// Tableau de nom des disciplines choisies, unique a chaque clan 
+		vector <int> valueDisciples;					// Tableau des points investits dans la disciplines choisi
 		string weakness; 
 		string organization;
 		
