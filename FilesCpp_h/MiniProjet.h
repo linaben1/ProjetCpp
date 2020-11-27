@@ -21,6 +21,10 @@
 #include <giomm/resource.h>
 #include <gdkmm/general.h>
 #include <glibmm/fileutils.h>
+#include <sstream>
+#include <algorithm>
+#include <iterator>
+
 using namespace std;
 
 /********************************************************************************************************/
@@ -99,6 +103,7 @@ class Attributes
 		void distribPhysical();
 		void distribSocial(string);	// attention a l'apparence
 		void distribMental();
+		int check_attributspoint(const string &combinaisonPoints, int physical, int social , int mental ); //pour tester l'attribution des points aux attributs 
 };
 
 
@@ -215,6 +220,9 @@ class Fenetre : public Gtk::Window
 	void on_combo_changed();
 	void next_button_clicked();
 	void next1_button_clicked();
+	void create_button_clicked();
+	void num_pages(Gtk::Widget* page, int numPage);
+	void next_page() ; 
 	
 	
     
@@ -229,14 +237,19 @@ class Fenetre : public Gtk::Window
         //BOX
         Gtk::VBox boxV;
         
-        //Note Button
+        //Notebook Button
 	 Gtk::Notebook pages;
 	 
 	 
-	 //Note Button 
+	 //Notebook Button 
 	Gtk::Button back, forward;
-	Gtk::HButtonBox boiteBoutons;
+	Gtk::HButtonBox FBBoutons;
 
+	//Button pour afficher le résultat
+	Gtk::Button create_button;
+	Gtk::HButtonBox VBoutons;
+
+	
 	
 	//Clan
 	 Gtk::Label clanName_label;	 

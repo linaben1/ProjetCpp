@@ -62,7 +62,7 @@ int main() {
 
 #include <map>
 #include <string>
-#include <boost/regex.hpp>
+
 #include <boost/algorithm/string.hpp>
 #include <cstddef>
 
@@ -71,7 +71,7 @@ int main() {
 #include <vector>
 
 #include <functional>
-#include "strtk.hpp"
+
 #include <deque> 
 #include <iostream>
 #include <map>
@@ -80,43 +80,23 @@ int main() {
 using namespace std;
 
 
-int main(){
-
-	deque<string> liste;
-	
- 	string line;
-
- 	fstream fichier("background.txt");
-	if ( !fichier ) cout << "fichier inexistant";
-	else {	
-		while(!fichier.eof())
-		{
-			getline(fichier, line);
-	
-			if (line.find("--") == 0)
-			{
-				line.erase(line.begin()-0);
-				line.erase(line.begin()-0);				
-				liste.push_back(line);
-			}
-		}
-	    }
-	    
-	 for (int i = 0 ; i < liste.size() ; i ++) {
-	
-		cout << liste[i] << endl ; 	
 
 
-		
-	}
-	
+using namespace std;
 
-	
-	
-	
-	
-	return 0 ;
-
+vector<string> split(const string &s, char delim) {
+    vector<string> result;
+    stringstream ss(s);
+    string item;
+    while (getline(ss, item, delim)) {
+        result.push_back(item);
+    }
+    return result;
 }
 
-
+int main() {
+    string str = "adsf+qwer+poui+fdgh";
+    vector<string> v = split(str, '+');
+    for (auto i : v) cout << i << endl;
+    return 0;
+}

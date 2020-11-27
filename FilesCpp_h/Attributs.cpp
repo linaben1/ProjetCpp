@@ -72,3 +72,33 @@ void Attributes::distribMental()
 }
 
 
+int Attributes::check_attributspoint(const string &combinaisonPoints, int physical, int social , int mental  )
+{		
+
+	int condition = 10 ;
+	//deque<string> results;
+
+		
+    std::regex regex("/");
+ 
+    std::deque<std::string> results(
+    std::sregex_token_iterator(combinaisonPoints.begin(), combinaisonPoints.end(), regex, -1),
+    std::sregex_token_iterator());
+    
+	string p = to_string(physical);
+	string s = to_string(social);
+	string m = to_string(mental);
+	
+	if ( (p != results[0]) || (s != results[1]) || (m != results[2]))
+	{
+	
+		condition = condition - 1;
+	}
+			
+	return condition; 	
+	
+	
+
+}
+
+

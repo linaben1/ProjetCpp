@@ -2,6 +2,7 @@
 
 Clan clan;
 OtherTraits otherTraits;
+Attributes attributes;
 
 /****************************************************************************************************************************************************************/
 /****************************************************************************************************************************************************************/
@@ -17,19 +18,26 @@ Fenetre::Fenetre()
 	set_position(Gtk::WIN_POS_CENTER);
 
 	resize(300, 300); 	
-	
-	
+		
 	add(boxV);
 	
+	//Ajout d'une image a mon interface	
 	boxV.pack_start(image);
-	//Bouton back
+	
+	//Bouton back & forward & create
 	back.set_can_focus(false);
-    	boiteBoutons.pack_start(back);
+    	FBBoutons.pack_start(back);
 
     	forward.set_can_focus(false);
-   	boiteBoutons.pack_start(forward);
-	  	
-    	boxV.pack_start(boiteBoutons);
+   	FBBoutons.pack_start(forward);
+   	
+   	create_button.set_can_focus(false);	  	
+   	VBoutons.pack_start(create_button);
+   	
+   	
+   	boxV.pack_start(FBBoutons);
+   	boxV.pack_end(VBoutons);
+    
 
 
 	//Création des différentes pages
@@ -97,7 +105,7 @@ Fenetre::Fenetre()
     	
     	
     	//Choix de la combinaison de points pour les différents catégories d'attributs	
- 	DistributionPointsAttribut_label.set_text(" Choisissez la combinaison pour les points d'attributs ( PHYSICAL, SOCIAL, MENTAL ) : ");
+ 	DistributionPointsAttribut_label.set_text(" Choose the combination for points distributed to attributes (PHYSICAL, SOCIAL, MENTAL) : ");
         mainGrid.attach(DistributionPointsAttribut_label, 0 , 3, 2, 1);
 	
 	DistributionPointsAttribut_combo.append("7/5/3");
@@ -184,7 +192,7 @@ Fenetre::Fenetre()
        	
     	
   	//Choix de la combinaison de points pour les différents catégories d'abilities
-	DistributionPointsAbilities_label.set_text(" Choisissez la combinaison pour les points d'abilities ( TALENTS, SKILLS, KNOWLEDGES ) : ");
+	DistributionPointsAbilities_label.set_text("Choose the combination for points distributed to abilities ( TALENTS, SKILLS, KNOWLEDGES ) : ");
         mainGrid2.attach(DistributionPointsAbilities_label, 0 , 0, 3, 1);
 	
 	DistributionPointsAbilities_combo.append("13/9/5");
@@ -448,53 +456,40 @@ Fenetre::Fenetre()
     	mainGrid3.attach(background1_combo, 2, 2, 1, 1);
     	mainGrid3.attach(background2_combo, 2, 3, 1, 1);
     	mainGrid3.attach(background3_combo, 2, 4, 1, 1);
-
-	    	
     	
     	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-	//Signal des boutons forward & back
+	//Signal des boutons forward & back & create
 	back.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::prev_page));
     	forward.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::next_page));
 
-
-
-	show_all_children();
+	//Bouton pour afficher la feuille du personnage      
+   	create_button.signal_clicked().connect( sigc::mem_fun(*this,
+            &Fenetre::create_button_clicked) );
+  
+    	create_button.add_pixlabel("info.xpm", "Open File");
+    	
+  	show_all_children();
 }
 
 Fenetre::~Fenetre() 
 {
 
 }
-
-void Fenetre::on_combo_changed() //Signal du changement de la combobox
+//////////////////////////////////
+void Fenetre::on_combo_changed() //Signal du changement de la combobox de clan qui permet de déterminer les différents disciplines liée au clan choisi et l'apparance au niveau des abilities au cas ou le nom du clan est un Nosferatu 
 {	
+	//On récupere le choix du clan de l'utilisateur 
 	string text_clanname = Clan_combo.get_active_text();
 	discipl_list = clan.make_table();	
 	deque<string> liste_discip;
-	
+		
 	//On détermine ici les disciplines associer au clan que l'utilisateur aura choisi 
 	for (auto it = discipl_list.begin(); it!= discipl_list.end(); ++it)
 	{
 		string text2 = it->first ; 
 		if (text_clanname == text2)
 		{
-			liste_discip.push_back(it->second);
-						
+			liste_discip.push_back(it->second);			
 		}
  	} 	
  	discipl1_label.set_text("  " + liste_discip[0] + "  ");
@@ -503,26 +498,289 @@ void Fenetre::on_combo_changed() //Signal du changement de la combobox
  	
  	 if ( text_clanname != "Nosferatu")
  	{	
- 		appearance_label.set_text(" Appearance ");     		 	 	
+ 		appearance_label.set_text(" Appearance ");     	
    	  	spin_appearance.set_range(1,5);
 		spin_appearance.set_increments(1,1);
- 			
  	}
  	else 	
  	{  	
- 		appearance_label.set_text(" Appearance ");     		 	 	
+ 		appearance_label.set_text(" Appearance ");     	 	
    	  	spin_appearance.set_range(0,0);
-		spin_appearance.set_increments(1,1);
-  		
+		spin_appearance.set_increments(1,1); 		
  	}    		
 }
  
+//////////////////////////////////////////////////////////////////////////////// 
+
+void Fenetre::create_button_clicked() //Signal du changement de la combobox
+{
+
+	string text_pointattributs = DistributionPointsAttribut_combo.get_active_text();
+	string text_clanname = Clan_combo.get_active_text();
+	
+	//point physic
+	int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+	int score_physical_total = score_strength + score_dexterity + score_stamina  ; 
+	
+	//Récupération des points attribué au caractere social
+	int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+	int score_social_total = score_charisma + score_manipulation + score_appearance  ;     	  
+     	if ( text_clanname != "Nosferatu")
+ 	{	
+ 		int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 	}
+ 	else 	
+ 	{  	
+		int score_social_total = score_charisma + score_manipulation  ;			  		
+ 	}   
+  	//Récupération des points attribué au caractere mental
+	int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+	int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+
+	int cond = attributes.check_attributspoint(text_pointattributs , score_physical_total , score_social_total , score_mental_total  );
+	
+	if(cond != 10)
+	{
+		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();		
+	}
+
+}	
+	/*
+	
+	int condition = 10 ; 
+	//Récuperer la combinaison d'attribution de points choisi pour les différentes catégories d'abilities & d'attributs.
+	string text_pointabilities = DistributionPointsAbilities_combo.get_active_text();
+	string text_pointattributs = DistributionPointsAttribut_combo.get_active_text();
+	string text_clanname = Clan_combo.get_active_text();
+
+	if(text_clanname == "" || text_pointabilities == "" || text_pointattributs == "" || )
+	{
+		condtion--;			
+ 		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();	 
+	}
+	else
+	{	
+				/////////////////////////// Gérer les distribution de points pour les attributs////////////////////////			
+		//Le cas ou la distribution choisi par l'utilisateur est 7/5/3
+		if (text_pointattributs == "7/5/3")
+		{	
+			int score_physical = 7 , score_social = 5 , score_mental = 3 ;		
+			//Récupération des points attribué au caractere physique
+			int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+			int score_physical_total = score_strength + score_dexterity + score_stamina  ; 				
+			//Récupération des points attribué au caractere social
+			int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+			int score_social_total = score_charisma + score_manipulation + score_appearance  ;     	  
+     			if ( text_clanname != "Nosferatu")
+ 			{	
+ 				int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 			}
+ 			else 	
+ 			{  	
+				int score_social_total = score_charisma + score_manipulation  ;			  		
+ 			}   
+  			//Récupération des points attribué au caractere mental
+			int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+			int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 			if ( (score_physical_total != 7) || (score_social_total != 5) || (score_mental_total != 3))
+ 			{		
+ 				condition--;
+ 				Gtk::MessageDialog dialog(*this, "The number of total points of PHYSICAL, SOCIAL and MENTAL attributes must equal 7, 5, 3 respectively !",false,Gtk::MESSAGE_ERROR);
+				dialog.run();	
+ 			} 
+		}
+		//Le cas ou la distribution choisi par l'utilisateur est 7/5/3
+		else if (text_pointattributs == "7/3/5")
+		{	
+			int score_physical = 7 , score_social = 3 , score_mental = 5 ;		
+			//Récupération des points attribué au caractere physique
+			int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+			int score_physical_total = score_strength + score_dexterity + score_stamina  ; 				
+			//Récupération des points attribué au caractere social
+			int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 
+    	  
+     			if ( text_clanname != "Nosferatu")
+ 		{	
+ 			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 		}
+ 		else 	
+ 		{  	
+			int score_social_total = score_charisma + score_manipulation  ;			  		
+ 		}
+   
+  		//Récupération des points attribué au caractere mental
+		int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+		int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 		if ( (score_physical_total != 7) || (score_social_total != 3) || (score_mental_total != 5))
+ 		{		
+ 			Gtk::MessageDialog dialog(*this, "The number of total points of PHYSICAL, SOCIAL and MENTAL attributes must equal 7, 3, 5 respectively !",false,Gtk::MESSAGE_ERROR);
+			dialog.run();	
+ 		} 
+ 	
+	}
+		
+	//Le cas ou la distribution choisi par l'utilisateur est 3/7/5
+	else if (text_pointattributs == "3/7/5")
+	{	
+		int score_physical = 3 , score_social = 7 , score_mental = 5 ;
+		
+		//Récupération des points attribué au caractere physique
+		int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+		int score_physical_total = score_strength + score_dexterity + score_stamina  ; 
+				
+		//Récupération des points attribué au caractere social
+		int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+		int score_social_total = score_charisma + score_manipulation + score_appearance  ; 
+    	  
+     		if ( text_clanname != "Nosferatu")
+ 		{	
+ 			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 		}
+ 		else 	
+ 		{  	
+			int score_social_total = score_charisma + score_manipulation  ;			  		
+ 		}
+   
+  		//Récupération des points attribué au caractere mental
+		int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+		int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 		if ( (score_physical_total != 3) || (score_social_total != 7) || (score_mental_total != 5))
+ 		{		
+ 			Gtk::MessageDialog dialog(*this, "Le nombre des points totaux de PHYSICAL, SOCIAL et MENTAL doivent être égaux à 3, 7, 5 respectivement !",false,Gtk::MESSAGE_ERROR);
+			dialog.run();	
+ 		} 
+ 	
+	}
+	
+	//Le cas ou la distribution choisi par l'utilisateur est 3/5/7
+	else if (text_pointattributs == "3/5/7")
+	{	
+		int score_physical = 3 , score_social = 5 , score_mental = 7 ;
+		
+		//Récupération des points attribué au caractere physique
+		int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+		int score_physical_total = score_strength + score_dexterity + score_stamina  ; 
+				
+		//Récupération des points attribué au caractere social
+		int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+		int score_social_total = score_charisma + score_manipulation + score_appearance  ; 
+    	  
+     		if ( text_clanname != "Nosferatu")
+ 		{	
+ 			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 		}
+ 		else 	
+ 		{  	
+			int score_social_total = score_charisma + score_manipulation  ;			  		
+ 		}
+   
+  		//Récupération des points attribué au caractere mental
+		int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+		int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 		if ( (score_physical_total != 3) || (score_social_total != 5) || (score_mental_total != 7))
+ 		{		
+ 			Gtk::MessageDialog dialog(*this, "Le nombre des points totaux de PHYSICAL, SOCIAL et MENTAL doivent être égaux à 3, 5, 7 respectivement !",false,Gtk::MESSAGE_ERROR);
+			dialog.run();	
+ 		} 
+	}
 
 
+	//Le cas ou la distribution choisi par l'utilisateur est 5/3/7
+	else if (text_pointattributs == "5/3/7")
+	{	
+		int score_physical = 5 , score_social = 3 , score_mental = 7 ;
+		
+		//Récupération des points attribué au caractere physique
+		int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+		int score_physical_total = score_strength + score_dexterity + score_stamina  ; 
+				
+		//Récupération des points attribué au caractere social
+		int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+		int score_social_total = score_charisma + score_manipulation + score_appearance  ; 
+    	  
+     		if ( text_clanname != "Nosferatu")
+ 		{	
+ 			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 		}
+ 		else 	
+ 		{  	
+			int score_social_total = score_charisma + score_manipulation  ;			  		
+ 		}
+   
+  		//Récupération des points attribué au caractere mental
+		int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+		int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 		if ( (score_physical_total != 5) || (score_social_total != 3) || (score_mental_total != 7))
+ 		{		
+ 			Gtk::MessageDialog dialog(*this, "Le nombre des points totaux de PHYSICAL, SOCIAL et MENTAL doivent être égaux à 5, 3, 7 respectivement !",false,Gtk::MESSAGE_ERROR);
+			dialog.run();	
+ 		} 
+ 	
+	}
+	
+	
+	//Le cas ou la distribution choisi par l'utilisateur est 5/7/3
+	else 
+	{	
+		int score_physical = 5 , score_social = 7 , score_mental = 3 ;
+		
+		//Récupération des points attribué au caractere physique
+		int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
+		int score_physical_total = score_strength + score_dexterity + score_stamina  ; 
+				
+		//Récupération des points attribué au caractere social
+		int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
+		int score_social_total = score_charisma + score_manipulation + score_appearance  ; 
+    	  
+     		if ( text_clanname != "Nosferatu")
+ 		{	
+ 			int score_social_total = score_charisma + score_manipulation + score_appearance  ; 	
+ 		}
+ 		else 	
+ 		{  	
+			int score_social_total = score_charisma + score_manipulation  ;			  		
+ 		}
+   
+  		//Récupération des points attribué au caractere mental
+		int score_perception = spin_perception.get_value_as_int() , score_intelligence = spin_intelligence.get_value_as_int() , score_wits = spin_wits.get_value_as_int();
+		int score_mental_total = score_perception + score_intelligence + score_wits  ; 				
+ 		if ( (score_physical_total != 5) || (score_social_total != 7) || (score_mental_total != 3))
+ 		{		
+ 			Gtk::MessageDialog dialog(*this, "Le nombre des points totaux de PHYSICAL, SOCIAL et MENTAL doivent être égaux à 5, 7, 3 respectivement !",false,Gtk::MESSAGE_ERROR);
+			dialog.run();	
+ 		} 
+ 	
+	}
+	
 
-/*    	
+  */ 		
+
+	
+
+	
+	
+/*	
+
+  	//Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
+  	int score1 = spin_discipl1.get_value_as_int();
+  	int score2 = spin_discipl2.get_value_as_int();
+ 	int score3 = spin_discipl3.get_value_as_int();
+ 	int score_dicipl = score1 + score2 + score3  ; 
+ 		
+ 	if (score_dicipl != 3 )
+ 	{		
+ 		Gtk::MessageDialog dialog(*this, "Le nombre de points totale de disciplines doit être égal à 3 !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();	
+ 	} 
+ */	
  
- */    	
+	
+
+
+    	
      	
      	/*    	
      	//Haven      	
@@ -551,52 +809,8 @@ void Fenetre::on_combo_changed() //Signal du changement de la combobox
      	*/
      	
      	
-/*   
-Fenetre::~Fenetre() 
-{
 
-}
-
-*/
 /*
-void Fenetre::on_combo_changed()
-{
-
-	string text_clanname = Clan_combo.get_active_text();
-	discipl_list = clan.make_table();	
-	deque<string> liste_discip;
-	
-	//On détermine ici les disciplines associer au clan que l'utilisateur aura choisi 
-	for (auto it = discipl_list.begin(); it!= discipl_list.end(); ++it)
-	{
-		string text2 = it->first ; 
-		if (text_clanname == text2)
-		{
-			liste_discip.push_back(it->second);
-						
-		}
- 	} 	
- 	discipl1_label.set_text("  " + liste_discip[0] + "  ");
- 	discipl2_label.set_text("  " + liste_discip[1] + "  ");
- 	discipl3_label.set_text("  " + liste_discip[2] + "  ");
- 	
- 	 if ( text_clanname != "Nosferatu")
- 	{	
- 		appearance_label.set_text(" Appearance ");     		 	 	
-   	  	spin_appearance.set_range(1,5);
-		spin_appearance.set_increments(1,1);
- 			
- 	}
- 	else 	
- 	{  	
- 		appearance_label.set_text(" Appearance ");     		 	 	
-   	  	spin_appearance.set_range(0,0);
-		spin_appearance.set_increments(1,1);
-  		
- 	}
-    		
-}
- 
 
 void Fenetre::next_button_clicked()
 {	

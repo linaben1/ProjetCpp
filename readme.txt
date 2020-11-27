@@ -2,3 +2,9 @@
 2- parser le fichier texte avec test.cpp en plusieurs fichier pour chaque classe.
 
 3- script strtk.hpp pour le split de caractere
+
+
+installer boost
+sudo apt-get install libboost-all-dev
+
+
