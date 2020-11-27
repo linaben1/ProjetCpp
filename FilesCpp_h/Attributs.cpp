@@ -72,19 +72,23 @@ void Attributes::distribMental()
 }
 
 
+
+
+/****************************************************************************************************************************************************************/
+/** Fonction qui permet de fixer une condition pour ensuite la vérifier afin de controller la distribution des points dans les différents catégories des attributs 
+ */
 int Attributes::check_attributspoint(const string &combinaisonPoints, int physical, int social , int mental  )
 {		
 
-	int condition = 10 ;
+	int condition = 0 ;
 	//deque<string> results;
 
 		
-    std::regex regex("/");
+    regex regex("/");
  
-    std::deque<std::string> results(
-    std::sregex_token_iterator(combinaisonPoints.begin(), combinaisonPoints.end(), regex, -1),
-    std::sregex_token_iterator());
-    
+    deque<string> results(
+    sregex_token_iterator(combinaisonPoints.begin(), combinaisonPoints.end(), regex, -1),
+    sregex_token_iterator());    
 	string p = to_string(physical);
 	string s = to_string(social);
 	string m = to_string(mental);
@@ -92,13 +96,10 @@ int Attributes::check_attributspoint(const string &combinaisonPoints, int physic
 	if ( (p != results[0]) || (s != results[1]) || (m != results[2]))
 	{
 	
-		condition = condition - 1;
+		condition++;
 	}
 			
 	return condition; 	
-	
-	
-
 }
 
 

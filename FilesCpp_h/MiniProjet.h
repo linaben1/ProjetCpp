@@ -27,6 +27,16 @@
 
 using namespace std;
 
+
+class Clan;
+class Attributes;
+class Abilities;
+class OtherTraits;
+class DistributionPoints;
+class Personnage;
+class DrawImage;
+class Fenetre_Vampire;
+class Fenetre;
 /********************************************************************************************************/
 /* Cette classe memorize et manipule les donnees sur les clans de vampire */
 class Clan
@@ -135,6 +145,7 @@ class Abilities
 		int getValueSkills(int);
 		void setKnowledges(int, int);
 		int getValueKnowledges(int);
+		int check_attributspointabilities(const string &combinaisonPoints, int physical, int social , int mental );//pour tester l'attribution des points aux abilities
 };
 
 
@@ -199,17 +210,59 @@ class DistributionPoints
 /********************************************************************************************************/
 class Personnage : public Clan, Attributes, Abilities, OtherTraits, DistributionPoints
 {
+		
+	protected:
+		string nomPersonnage; //Nom du personnage	
+		string chroniclePerso;	//Chronicle
+		string Concept;//Concept
+		string generation;//Generation
+		string sire;	//le nom du Sire 
+		string sexePerso;
 	
-	
-	//Nom personnage
-	//Nom joueur
-	//Chronicle
-	//Concept
-	//Generation
-	//Sire 
-	
+	public:
+
+		void setNomPersonnage(string);					// Recupere le nom du personnage 
+		void setSexe(string);							// Recupere le sexe du personnage
+		void setChronicle(string);						// Recupere la chronicle
+		void setConcept(string);							// Recupere le Concepte
+		
+		string getNomPersonnage();							/// Renvoie le choix de la race
+		string getSexe();						/// Renvoie le choix de la classe
+		string getChronicle();							/// Renvoie le choix du sexe
+		string getConcept();							/// Renvoie le choix du nom
+		
 };
 
+/********************************************************************************************************/
+
+class DrawImage : public Gtk::DrawingArea
+{
+
+	public:
+        	DrawImage(const std::string& file);
+        	virtual ~DrawImage();
+
+    	protected:
+        	Glib::RefPtr<Gdk::Pixbuf> monImage;
+        	bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr) override;
+        	void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int, int, Glib::ustring);
+};
+
+/********************************************************************************************************/
+class Fenetre_Vampire : public Gtk::Window
+{
+	 public:
+		Fenetre_Vampire();
+		virtual ~Fenetre_Vampire();
+
+    	protected:
+        	DrawImage monImage;
+		Gtk::ScrolledWindow m_ScrolledWindow;
+
+};
+
+
+/********************************************************************************************************/
 
 class Fenetre : public Gtk::Window
 {
@@ -218,13 +271,14 @@ class Fenetre : public Gtk::Window
         Fenetre();
         virtual ~Fenetre(); //Le destructeur pour pouvoir détruire le bouton.
 	void on_combo_changed();
+	void on_combobackground_changed() ;
+	void on_combobackground1_changed() ;
+	void on_combobackground2_changed() ;
+	void on_combobackground3_changed() ;
 	void next_button_clicked();
 	void next1_button_clicked();
 	void create_button_clicked();
-	void num_pages(Gtk::Widget* page, int numPage);
-	void next_page() ; 
-	
-	
+	Fenetre_Vampire Feuille_Vampire;	
     
     protected :
     
@@ -323,14 +377,17 @@ class Fenetre : public Gtk::Window
          Gtk::Label discipl1_label, discipl2_label, discipl3_label;
 
     	 //**Background 
-	 Gtk::ComboBoxText background1_combo, background2_combo, background3_combo;
+	 Gtk::ComboBoxText background1_combo, background2_combo, background3_combo, background4_combo, background5_combo ;
 	 deque<string> backgroundName_list;
-
-    	 
+	 
+    	  Gtk::SpinButton spin_background1, spin_background2, spin_background3 , spin_background4, spin_background5;         
     	 
     	 //**Virtues
     	
-	
+    	Gtk::Label virtues_label ,conscience_label, selfControl_label, courage_label;
+	Gtk::SpinButton spin_conscience, spin_selfControl, spin_courage;
+	     	 
+     
 };
 
 
