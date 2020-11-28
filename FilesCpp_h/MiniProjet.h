@@ -55,7 +55,8 @@ class Clan
 		string weakness; 
 		string organization;
 		
-		string nature_and_demeanor; 
+		string nature;
+		string demeanor; 
 		
 	public:
 	
@@ -83,8 +84,10 @@ class Clan
 		string GetOrganization();
 		void SetOrganization(string);
 		
-		string GetNature_and_Demeanor();
-		void SetNature_and_Demeanor(string);
+		string GetNature();
+		void SetNature(string);
+		string GetDemeanor();
+		void SetDemeanor(string);
 		
 		multimap<string, string > make_table(void); //fonction pour récupérer un tableau des disciplines associé a chaque clan
 		deque<string> clan_list(void);//fonction qui récupere la liste des clan
@@ -98,27 +101,13 @@ class Clan
 class Attributes
 {
 	protected:
-		int physical, social, mental;
-		
-		int strength, dexterity, stamina;
-		int charisma, manipulation, appearance;
-		int perception, intelligence, wits;
-		
+		int point;
 	public:
-		void InitialiseAttribute(string);
-		void getPhysicalPoints(int);
-		void getSocialPoints(int);
-		void getMentalPoints(int);
-		
-		void distribPhysical();
-		void distribSocial(string);	// attention a l'apparence
-		void distribMental();
-		int check_attributspoint(const string &combinaisonPoints, int physical, int social , int mental ); //pour tester l'attribution des points aux attributs 
+	
+		int setPoints(string , int );		//Distribution de points par élément appartenant a une categorie donnée exemple: strenght de la catégorie physique
+		int getPoints(int);
+		int check_attributspoint(const string &combinaisonPoints, int, int, int ); //pour tester l'attribution des points aux attributs 
 };
-
-
-
-
 
 
 /********************************************************************************************************/
@@ -129,6 +118,7 @@ class Abilities
 		int skills;
 		int knowledges;
 		int maxInitAbilities;
+		int point;
 		
 		int tabTalent[11];			/// remplace la liste des 11 talents
 		int tabSkills[11];
@@ -145,7 +135,12 @@ class Abilities
 		int getValueSkills(int);
 		void setKnowledges(int, int);
 		int getValueKnowledges(int);
-		int check_attributspointabilities(const string &combinaisonPoints, int physical, int social , int mental );//pour tester l'attribution des points aux abilities
+				
+		int setPoints(string , int );		//Distribution de points par élément appartenant a une categorie donnée exemple: alertness de la catégorie talents
+		int getPoints(int);
+	
+		
+		int check_abilitiespointabilities(const string &combinaisonPoints, int, int , int );//pour tester l'attribution des points aux abilities
 };
 
 
@@ -225,11 +220,15 @@ class Personnage : public Clan, Attributes, Abilities, OtherTraits, Distribution
 		void setSexe(string);							// Recupere le sexe du personnage
 		void setChronicle(string);						// Recupere la chronicle
 		void setConcept(string);							// Recupere le Concepte
+		void setSire(string);							// Recupere le sire
+		
+		
 		
 		string getNomPersonnage();							/// Renvoie le choix de la race
 		string getSexe();						/// Renvoie le choix de la classe
 		string getChronicle();							/// Renvoie le choix du sexe
 		string getConcept();							/// Renvoie le choix du nom
+		string getSire();							/// Renvoie le choix du sire
 		
 };
 
@@ -363,7 +362,7 @@ class Fenetre : public Gtk::Window
 	Gtk::Label abilities_label, talents_label, alertness_label, athletics_label, awareness_label, brawl_label, empathy_label, expression_label, intimidation_label, leadership_label, streetwise_label, subterfuge_label,  skills_label, animalKen_label, crafts_label, drive_label, etiquette_label, firearms_label, larceny_label, melee_label, performance_label, stealth_label, survival_label,  knowledges_label, academics_label, computer_label, finance_label, investigation_label, law_label, medicine_label, occult_label, politics_label, science_label, technology_label;
 	
 	
-	Gtk::SpinButton spin_abilities, spin_talents, spin_alertness, spin_athletics, spin_awareness, spin_brawl, spin_empathy, spin_expression, spin_intimidation, spin_leadership, spin_streetwise, spin_subterfuge,  spin_skills, spin_animalKen, spin_crafts, spin_drive, spin_etiquette, spin_firearms, spin_larceny, spin_melee, spin_performance, spin_stealth, spin_survival, spin_knowledges, spin_academics, spin_computer, spin_finance, spin_investigation, spin_law, spin_medicine, spin_occult, spin_politics, spin_science, spin_technology;
+	Gtk::SpinButton spin_alertness, spin_athletics, spin_awareness, spin_brawl, spin_empathy, spin_expression, spin_intimidation, spin_leadership, spin_streetwise, spin_subterfuge, spin_animalKen, spin_crafts, spin_drive, spin_etiquette, spin_firearms, spin_larceny, spin_melee, spin_performance, spin_stealth, spin_survival, spin_academics, spin_computer, spin_finance, spin_investigation, spin_law, spin_medicine, spin_occult, spin_politics, spin_science, spin_technology;
     	 
     	 //Advantages
     	 Gtk::Label advantages_label, background_label;
@@ -386,6 +385,7 @@ class Fenetre : public Gtk::Window
     	
     	Gtk::Label virtues_label ,conscience_label, selfControl_label, courage_label;
 	Gtk::SpinButton spin_conscience, spin_selfControl, spin_courage;
+	 
 	     	 
      
 };

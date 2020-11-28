@@ -177,14 +177,29 @@ string Clan::GetOrganization()
 /** Fonction qui renvoie la nature du clan de mon personnage
  * @return  nature_and_demeanor : la nature de mon personnage */
 
-void Clan::SetNature_and_Demeanor(string nature)
+void Clan::SetNature(string nat)
 {
-	nature_and_demeanor = nature;
+	nature = nat;
 }
 
-string Clan::GetNature_and_Demeanor()
+string Clan::GetNature()
 {
-	return nature_and_demeanor;
+	return nature;
+}
+
+
+/****************************************************************************************************************************************************************/
+/** Fonction qui renvoie la demeanor du clan de mon personnage
+ * @return  demeanor : la nature de mon personnage */
+
+void Clan::SetDemeanor(string dem)
+{
+	demeanor = dem;
+}
+
+string Clan::GetDemeanor()
+{
+	return demeanor;
 }
 
 
@@ -269,6 +284,9 @@ deque<string> Clan::clan_list(){
 }
 
 
+/****************************************************************************************************************************************************************/
+/** Fonction qui renvoie la liste de nature & demeanor **/
+
 deque<string> Clan::nature_list()
 {	
 	deque<string> liste_nature;	
@@ -286,8 +304,7 @@ deque<string> Clan::nature_list()
 				liste_nature.push_back(line2);
 			}
 		}
-	    }
-	    
+	    }	    
 	return liste_nature;
 	
 }

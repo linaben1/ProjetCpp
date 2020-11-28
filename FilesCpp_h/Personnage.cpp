@@ -64,4 +64,20 @@ string Personnage::getConcept()
 }
 
 
+/****************************************************************************************************************************************************************/
+/** Fonction qui recupere et renvoie le nom du sire  **/
+
+
+
+void Personnage::setSire(string sir)
+{
+	sire = sir;
+}
+
+string Personnage::getSire()
+{
+	return sire;
+}
+
+
 
