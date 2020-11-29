@@ -213,6 +213,8 @@ class Personnage : public Clan, Attributes, Abilities, OtherTraits, Distribution
 		string generation;//Generation
 		string sire;	//le nom du Sire 
 		string sexePerso;
+		string Humanity;
+		string Willpower;
 	
 	public:
 
@@ -221,16 +223,19 @@ class Personnage : public Clan, Attributes, Abilities, OtherTraits, Distribution
 		void setChronicle(string);						// Recupere la chronicle
 		void setConcept(string);							// Recupere le Concepte
 		void setSire(string);							// Recupere le sire
+		void setHumanity(string);
+		void setWillpower(string);
 		
-		
-		
-		string getNomPersonnage();							/// Renvoie le choix de la race
-		string getSexe();						/// Renvoie le choix de la classe
-		string getChronicle();							/// Renvoie le choix du sexe
-		string getConcept();							/// Renvoie le choix du nom
-		string getSire();							/// Renvoie le choix du sire
-		
+		string getHumanity();		//Renvoie les points attribué a humanity
+		string getNomPersonnage();							// Renvoie le nom du personnage
+		string getSexe();						// Renvoie le choix du sexe
+		string getChronicle();							
+		string getConcept();						// Renvoie le concept
+		string getSire();						// Renvoie le choix du sire
+		string getWillpower();						//Renvoie les points attribué a willpower
+
 };
+
 
 /********************************************************************************************************/
 
@@ -269,14 +274,15 @@ class Fenetre : public Gtk::Window
  
         Fenetre();
         virtual ~Fenetre(); //Le destructeur pour pouvoir détruire le bouton.
-	void on_combo_changed();
-	void on_combobackground_changed() ;
+	void on_combo_changed(); //signal de changement de clan
+	void on_combobackground_changed() ; //signal de changement de background 1
 	void on_combobackground1_changed() ;
 	void on_combobackground2_changed() ;
 	void on_combobackground3_changed() ;
-	void next_button_clicked();
-	void next1_button_clicked();
+	void on_combobackground4_changed() ;
+	void on_combogeneration_changed() ; //signal de changement de background 1
 	void create_button_clicked();
+	void spin_virtues_clicked();  //signal de changement des virtues 
 	Fenetre_Vampire Feuille_Vampire;	
     
     protected :
@@ -300,14 +306,16 @@ class Fenetre : public Gtk::Window
 
 	//Button pour afficher le résultat
 	Gtk::Button create_button;
-	Gtk::HButtonBox VBoutons;
-
-	
+	Gtk::HButtonBox VBoutons;	
 	
 	//Clan
 	 Gtk::Label clanName_label;	 
 	 Gtk::ComboBoxText Clan_combo;
 	 deque<string> clanName_list;
+	 
+	 //Generation
+	 Gtk::Label generation_label;	 
+	 Gtk::ComboBoxText generation_combo;
 	 
 	 //Nature & Demeanor
 	 Gtk::Label natureName_label;
@@ -381,13 +389,24 @@ class Fenetre : public Gtk::Window
 	 
     	  Gtk::SpinButton spin_background1, spin_background2, spin_background3 , spin_background4, spin_background5;         
     	 
-    	 //**Virtues
-    	
+    	 //**Virtues    	
     	Gtk::Label virtues_label ,conscience_label, selfControl_label, courage_label;
 	Gtk::SpinButton spin_conscience, spin_selfControl, spin_courage;
 	 
-	     	 
-     
+	 //Humanity (est égal à Conscience + Self-Control)
+	 Gtk::Label humanity_label, humanity_score;
+        
+     	 //Willpower (égal à Courage) )
+     	 Gtk::Label willpower_score , willpower_label;
+     	 
+     	 	
+    	//Blood pool & blood per turn 	
+    	Gtk::Label blood_label , blood_turn_label , blood_score, blood_score_turn; 
+    	
+   
+     	 
+     	 
+     	 
 };
 
 

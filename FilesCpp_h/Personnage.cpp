@@ -80,4 +80,33 @@ string Personnage::getSire()
 }
 
 
+/****************************************************************************************************************************************************************/
+/** Fonction qui recupere et renvoie humanity du personnage  **/
+
+void Personnage::setHumanity(string human)
+{
+	Humanity = human;
+}
+
+string Personnage::getHumanity()
+{
+	return Humanity;
+}
+
+
+
+/****************************************************************************************************************************************************************/
+/** Fonction qui recupere et renvoie le sexe du personnage  **/
+
+
+void Personnage::setWillpower(string willp)
+{
+	Willpower = willp;
+}
+
+string Personnage::getWillpower()
+{
+	return Willpower;
+}
+
 

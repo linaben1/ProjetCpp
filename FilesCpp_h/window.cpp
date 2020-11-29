@@ -15,6 +15,8 @@ deque <int> abilitie; //deque contenant les points attributé a chaque élément
 deque <int> discipline; //deque contenant les points attributé a chaque éléments de disciplines qui nous permet de remplir le formulaire 
 deque <int> background; //deque contenant les points attributé a chaque éléments des background qui nous permet de remplir le formulaire 
 deque <string> backgroundListe; //deque contenant la liste des background choisi par l'utilisateur 
+deque <int> virtues; //deque contenant les points attributé a chaque éléments de virtues qui nous permet de remplir le formulaire 
+
 Fenetre::Fenetre()
 : boxV (Gtk :: ORIENTATION_HORIZONTAL, 12),back(Gtk::Stock::GO_BACK),forward(Gtk::Stock::GO_FORWARD), image("Images/image_1.jpg")
 {
@@ -40,8 +42,7 @@ Fenetre::Fenetre()
    	
    	create_button.set_can_focus(false);	  	
    	VBoutons.pack_start(create_button);
-   	
-   	
+   	  	
    	boxV.pack_start(FBBoutons);
    	boxV.pack_end(VBoutons);
     
@@ -71,30 +72,7 @@ Fenetre::Fenetre()
    	chronicle_entry.set_max_length(50);
     	mainGrid.attach(chronicle_entry, 1, 2, 1, 1);   	
     
-   	//Concept
-    	concept_label.set_text("  Concept:  ");
- 	mainGrid.attach(concept_label, 2, 2, 1, 1);
-   	concept_entry.set_max_length(50);
-    	mainGrid.attach(concept_entry, 3, 2, 1, 1);  	
-    	
-    	//Sire
-    	sire_label.set_text("  Sire:  ");
- 	mainGrid.attach(sire_label, 4, 2, 1, 1);
-   	sire_entry.set_max_length(50);
-    	mainGrid.attach(sire_entry, 5, 2, 1, 1);   	
-	
-	//Le clan 	
-	clanName_label.set_text("  Clan* :  ");
-        mainGrid.attach(clanName_label, 4 , 0, 1, 1);
-	clanName_list = clan.clan_list();
-	for(int i=0; i<clanName_list.size(); ++i)	
-		Clan_combo.append(clanName_list[i]);		
-	Clan_combo.signal_changed().connect(sigc::mem_fun(*this,
-              &Fenetre::on_combo_changed) );
-
-	mainGrid.attach(Clan_combo, 5, 0, 1, 1);
- 		 
-	//Nature & Denameor
+    	//Nature & Denameor
 	natureName_label.set_text("  Nature:  ");
         mainGrid.attach(natureName_label, 2, 0, 1, 1);
         demeanorName_label.set_text("  Demeanor:  ");
@@ -109,7 +87,49 @@ Fenetre::Fenetre()
     	mainGrid.attach(nature_combo, 3, 0, 1, 1);
     	mainGrid.attach(demeanor_combo, 3, 1, 1, 1);
     	
+    
+   	//Concept
+    	concept_label.set_text("  Concept:  ");
+ 	mainGrid.attach(concept_label, 2, 2, 1, 1);
+   	concept_entry.set_max_length(50);
+    	mainGrid.attach(concept_entry, 3, 2, 1, 1);  	
     	
+    	//Le clan 	
+	clanName_label.set_text("  Clan* :  ");
+        mainGrid.attach(clanName_label, 4 , 0, 1, 1);
+	clanName_list = clan.clan_list();
+	for(int i=0; i<clanName_list.size(); ++i)	
+		Clan_combo.append(clanName_list[i]);		
+	Clan_combo.signal_changed().connect(sigc::mem_fun(*this,
+              &Fenetre::on_combo_changed) );
+
+	mainGrid.attach(Clan_combo, 5, 0, 1, 1);
+ 		 	
+	//Generation 
+	generation_label.set_text("  Generation :  ");
+        mainGrid.attach(generation_label, 4 , 1, 1, 1);
+	generation_combo.append("4th");
+	generation_combo.append("5th");
+	generation_combo.append("6th");
+	generation_combo.append("7th");
+	generation_combo.append("8th");
+	generation_combo.append("9th");
+	generation_combo.append("10th");
+	generation_combo.append("11th");
+	generation_combo.append("12th");
+	generation_combo.append("13th");
+	generation_combo.append("14th");
+	generation_combo.append("15th");
+
+	mainGrid.attach(generation_combo, 5, 1, 1, 1);
+ 	
+	
+    	//Sire
+    	sire_label.set_text("  Sire:  ");
+ 	mainGrid.attach(sire_label, 4, 2, 1, 1);
+   	sire_entry.set_max_length(50);
+    	mainGrid.attach(sire_entry, 5, 2, 1, 1);   	
+			
     	
     	//Choix de la combinaison de points pour les différents catégories d'attributs	
  	DistributionPointsAttribut_label.set_text(" Choose the combination for points distributed to attributes (PHYSICAL, SOCIAL, MENTAL) * : ");
@@ -509,8 +529,29 @@ Fenetre::Fenetre()
 	mainGrid3.attach(spin_conscience, 5, 2, 1, 1);
     	mainGrid3.attach(spin_selfControl, 5, 3, 1, 1);
     	mainGrid3.attach(spin_courage, 5, 4, 1, 1); 
+ 
+    	//Signal du changement des virtues 
+    	spin_conscience.signal_value_changed().connect( sigc::mem_fun(*this,
+            &Fenetre::spin_virtues_clicked) );
+  	spin_selfControl.signal_value_changed().connect( sigc::mem_fun(*this,
+            &Fenetre::spin_virtues_clicked) );
+        spin_courage.signal_value_changed().connect( sigc::mem_fun(*this,
+            &Fenetre::spin_virtues_clicked) );
+  	    	
+    	//Humanity     	
+    	humanity_label.set_text(" Humanity/Path "); 
+    	humanity_score.set_text("2");
+    	willpower_score.set_text("1");
 
+    	mainGrid3.attach(humanity_label, 7, 0, 1, 1); 
+    	mainGrid3.attach(humanity_score, 7, 1, 1, 1); 
     	
+    	//Willpower   	
+    	willpower_label.set_text(" Willpower "); 
+
+    	mainGrid3.attach(willpower_label, 7, 3, 1, 1); 
+    	mainGrid3.attach(willpower_score, 7, 4, 1, 1); 
+    	    	
 	//Signal des boutons forward & back & create
 	back.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::prev_page));
     	forward.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::next_page));
@@ -648,8 +689,17 @@ void Fenetre::on_combobackground3_changed() //Signal du changement de la combobo
 }
 
 
-//////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
+void Fenetre::spin_virtues_clicked() //Signal du changement de la combobox 1 de background 
+{
+	int human = spin_conscience.get_value_as_int()+spin_selfControl.get_value_as_int();
+	humanity_score.set_text(to_string(human)); 
+	int willp = spin_courage.get_value_as_int();
+	willpower_score.set_text(to_string(willp)); 
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 void Fenetre::create_button_clicked() //Signal du changement de la combobox
 {
 /*	//Récupération des signaux 
@@ -700,7 +750,6 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 */	/////////////////////////////Verifier l'attribution des points pour les abilities
 
 
-
 	//Récuppération des points attribué au talents
 	int score_alertness = spin_alertness.get_value_as_int() , score_athletics = spin_athletics.get_value_as_int() , score_awareness = spin_awareness.get_value_as_int(), score_brawl = spin_brawl.get_value_as_int() , score_empathy = spin_empathy.get_value_as_int() , score_expression = spin_expression.get_value_as_int() , score_intimidation = spin_intimidation.get_value_as_int() , score_leadership = spin_leadership.get_value_as_int() , score_streetwise = spin_streetwise.get_value_as_int(), score_subterfuge = spin_subterfuge.get_value_as_int();
 		
@@ -729,7 +778,7 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		condition_total--;
 	}	
 */		
-	//Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
+	///////////////////////Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
   	int score1 = spin_discipl1.get_value_as_int();
   	int score2 = spin_discipl2.get_value_as_int();
  	int score3 = spin_discipl3.get_value_as_int();
@@ -744,7 +793,7 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
  		condition_total--;	
  	}
 	*/
-	//Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
+	//////////////////////Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
   	int score1_background = spin_background1.get_value_as_int();
   	int score2_background = spin_background2.get_value_as_int();
  	int score3_background = spin_background3.get_value_as_int();
@@ -759,13 +808,54 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		dialog.run();	
  		condition_total--;	
  	}
-		
-	if(condition_total != 10)
+*/
+	//////////////////////Vérifier si c'est on a choisi la bonne génération car si on choisi pas génération dans le background le personnage sera assigné automatiquement a la 13 eme génération 	
+		//Récupération du champ du dernier background si présent 
+		 
+	backgroundListe.push_back(background1_combo.get_active_text()); backgroundListe.push_back(background2_combo.get_active_text()); backgroundListe.push_back(background3_combo.get_active_text()); backgroundListe.push_back(background4_combo.get_active_text()); backgroundListe.push_back(background5_combo.get_active_text());
+	string text_generation = generation_combo.get_active_text();		
+	
+	for (int i = 0 ; i < backgroundListe.size() ; i++)
+	{
+		if( text_generation != "")
+		{
+			if(backgroundListe[i] == "Generation")
+			{
+				if(text_generation != "13th")
+				{			
+					condition_total--;
+					Gtk::MessageDialog dialog(*this, " If you have chosen generation in the backgrounds you must choose the 13th generation for your game character!",false,Gtk::MESSAGE_ERROR);
+					dialog.run();				
+				}		
+			}	
+		}
+	}
+	
+/*	if(condition_total != 10)
 	{
 		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
 		dialog.run();	
 	}
 */	
+
+
+	//Récuperer les points attribué pour chaque virtues et s'assurer qu'il soit égale a 7
+  	int score1_virtue = spin_conscience.get_value_as_int();
+  	int score2_virtue = spin_selfControl.get_value_as_int();
+ 	int score3_virtue = spin_courage.get_value_as_int();
+ 	virtues.push_back(score1_virtue) ; virtues.push_back(score2_virtue); virtues.push_back(score3_virtue);
+ 	int score_virtue = score1_virtue + score2_virtue + score3_virtue  ; 	
+ 	/*	
+ 	if (score_virtue != 7 )
+ 	{		
+ 		Gtk::MessageDialog dialog(*this, " The total points awarded to disciplines  must be equal to 7 !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();	
+ 		condition_total--;	
+ 	}
+	*/
+	
+
+
 	if(condition_total == 10)
 	{
 		//Récupération des info rentrer par le joueur 
@@ -777,12 +867,9 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		string concepte = concept_entry.get_text();
 		string nomC = Clan_combo.get_active_text();
 		string sir = sire_entry.get_text();
-				
-		
-		//Récupération du champ du dernier background si présent 
-		 
-		 backgroundListe.push_back(background1_combo.get_active_text()); backgroundListe.push_back(background2_combo.get_active_text()); backgroundListe.push_back(background3_combo.get_active_text()); backgroundListe.push_back(background4_combo.get_active_text()); backgroundListe.push_back(background5_combo.get_active_text());
-		
+		string hum = humanity_score.get_text();
+		string wil = willpower_score.get_text();
+					
 		
 		//Envoie les information a notre classe personnage
 		personnage.setNomPersonnage(nomP);	// nom du personnage 
@@ -793,8 +880,10 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		personnage.setConcept(concepte); //le concept du personnage 
 		clan.SetClanName(nomC); //nom du clan 
 		personnage.setSire(sir); //le sire 
+		personnage.setHumanity(hum); //le score de l'humanity
+		personnage.setWillpower(wil); //le score de willpower
 		
-		
+
 		Feuille_Vampire.show(); 
 		
 	}
@@ -856,6 +945,8 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	string conc = personnage.getConcept(); //le concept du personnage 
 	string cla =  clan.GetClanName(); //nom du clan 
 	string sir =  personnage.getSire(); //nom du sire
+	string hu =  personnage.getHumanity(); //point attribué a humanity
+	string wi =  personnage.getWillpower(); //nom du sire
 	
 	//Les points pour chaque élément d'attributs 
 
@@ -864,22 +955,24 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	//Les points pour chaque élément d'abilities
 	int alertness = abilitie[0] , athletics = abilitie[1] , awareness = abilitie[2], brawl = abilitie[3] , empathy = abilitie[4] , expression = abilitie[5] , intimidation = abilitie[6] , leadership = abilitie[7], streetwise = abilitie[8] , subterfuge = abilitie[9], animalKen =abilitie[10] , crafts = abilitie[11], drive = abilitie[12], etiquette = abilitie[13], firearms = abilitie[14] , larceny = abilitie[15] , melee = abilitie[16], performance = abilitie[17], stealth =abilitie[18] , survival = abilitie[19], academics = abilitie[20], computer = abilitie[21], finance = abilitie[22] , investigation = abilitie[23] , law = abilitie[24] , medicine = abilitie[25], occult = abilitie[26] , politics = abilitie[27] , science = abilitie[28] , technology = abilitie[29] ;
 		
-	//Disciplines
-	
+	//Disciplines	
 	string discipl1 = liste_discip[0] , discipl2 = liste_discip[1] , discipl3 = liste_discip[2] ;
 	int discip1 = discipline[0] , discip2 = discipline[1] , discip3 = discipline[2] ;
 	
-	//Background 
-		
+	//Background 		
 	string background1 = backgroundListe[0] , background2= backgroundListe[1] , background3= backgroundListe[2] , background4= backgroundListe[3] , background5= backgroundListe[4] ;		
 	int backgroundP1 = background[0] , backgroundP2 = background[1] , backgroundP3 = background[2] , backgroundP4 = background[3] , backgroundP5 = background[4] ;
 		
+	//Virtues	
+	int virtue1 = virtues[0] , virtue2 = virtues[1] , virtue3 = virtues[2] ;
+	
 	attribut.clear();
 	abilitie.clear();
 	liste_discip.clear();
 	discipline.clear();
 	backgroundListe.clear();
 	background.clear();
+	virtues.clear();
 			     
 	if(!monImage)
 	{
@@ -970,7 +1063,15 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	draw_text(cr, 768 , 1225 , to_string(backgroundP4));
 	draw_text(cr, 768 , 1260 , to_string(backgroundP5));
 	
+	//Virtues
 	
+	draw_text(cr, 1168 , 1118 , to_string(virtue1));
+	draw_text(cr, 1168 , 1190 , to_string(virtue2));
+	draw_text(cr, 1168 , 1255 , to_string(virtue3));
+	
+	//Humanity & Willpower
+	draw_text(cr, 668 , 1400 , hu);
+	draw_text(cr, 668 , 1560 , wi);
 	
 	return true;
 		
