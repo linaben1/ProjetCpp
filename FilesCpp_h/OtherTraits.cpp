@@ -62,3 +62,42 @@ deque<string> OtherTraits::background_list()
 
 
 
+/****************************************************************************************************************************************************************/
+/** Fonction qui renvoie la liste des Merits **/
+
+deque<string> OtherTraits::merits_list()
+{
+	deque<string> liste;	
+ 	string line;
+ 	regex pattern { "--.+(Merit\\))" };
+ 	fstream fichier("file_part11.txt");
+	if ( !fichier ) cout << "fichier inexistant";
+	else 
+	{	
+		while(!fichier.eof())
+		{
+			getline(fichier, line);	
+			if (line.find("--") == 0)
+			{
+				bool result = regex_match(line , pattern); 	
+				if (result == 1) 
+				{
+					line.erase(line.begin()-0);
+					line.erase(line.begin()-0);	
+					line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();
+					
+			
+					liste.push_back(line);			
+				}
+			}
+		
+		}
+		
+	}			
+			
+
+	return liste ;
+}
+
+
+

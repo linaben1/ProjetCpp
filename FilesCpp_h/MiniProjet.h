@@ -155,13 +155,12 @@ class OtherTraits
 		string getBloodpool(); 
 		void setBloodpoolturn(string);
 		string getBloodpoolturn(); 
-		deque<string> background_list();
+		deque<string> background_list();	//Liste des background	
+		deque<string> merits_list();		//liste des merits 
 		
 };
 
 /********************************************************************************************************/
-
-
 
 class DistributionPoints
 {
@@ -264,19 +263,18 @@ class Fenetre : public Gtk::Window
 	Fenetre_Vampire Feuille_Vampire;	
     
     protected :
-    
+  		
 	//Image en background    	  
   	Gtk::Image image;
-
-    	//Les différents GRIDs 
-        Gtk::Grid mainGrid, mainGrid2, mainGrid3;
-        //, mainGrid4; //Création du pointeur sur bouton.
-        
+       
         //BOX
         Gtk::VBox boxV;
         
         //Notebook Button
 	 Gtk::Notebook pages;
+
+	//Les différents Grids 
+        Gtk::Grid mainGrid, mainGrid2, mainGrid3, mainGrid4; //Création du pointeur sur bouton.
 	 
 	 
 	 //Notebook Button 
@@ -382,7 +380,13 @@ class Fenetre : public Gtk::Window
     	//Blood pool & blood per turn 	
     	Gtk::Label blood_label , blood_turn_label , blood_score, blood_score_turn; 
     	
-   
+   	//Merits & Flows 
+   	Gtk::Label merits_label;
+   	Gtk::ComboBoxText merits1_combo, merits2_combo, merits3_combo, merits4_combo, merits5_combo ;
+	deque<string> merits_list;		 
+    	Gtk::SpinButton spin_merits1, spin_merits2, spin_merits3 , spin_merits4, spin_merits5;         
+  
+   	
      	 
      	 
      	 

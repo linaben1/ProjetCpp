@@ -50,10 +50,14 @@ Fenetre::Fenetre()
 
 	//Création des différentes pages
 	
-	//////////////////////////////////PAGE1/////////////////////////////////
+	//////////////////////////////////PAGES/////////////////////////////////
 	boxV.pack_start(pages);	
 	pages.append_page(mainGrid, "page 1 ");
-	
+	pages.append_page(mainGrid2, "page2");
+	pages.append_page(mainGrid3, "page3");
+	pages.append_page(mainGrid4, "page 4 ");
+       	
+	//////////////////////////////////PAGE1/////////////////////////////////
 	//Label du nom du personnage
 	name_label.set_text("  Name:  ");
  	mainGrid.attach(name_label, 0, 0, 1, 1);	
@@ -218,9 +222,7 @@ Fenetre::Fenetre()
      	mainGrid.attach(spin_wits, 5, 8, 1, 1); 
      	     	
      	//////////////////PAGE2////////////////////////////////////
-    	pages.append_page(mainGrid2, "page2");
-       	
-    	
+   	
   	//Choix de la combinaison de points pour les différents catégories d'abilities
 	DistributionPointsAbilities_label.set_text("Choose the combination for points distributed to abilities ( TALENTS, SKILLS, KNOWLEDGES ) * : ");
         mainGrid2.attach(DistributionPointsAbilities_label, 0 , 0, 3, 1);
@@ -437,7 +439,6 @@ Fenetre::Fenetre()
      	
    
     	  //////////////////PAGE3////////////////////////////////////
-    	pages.append_page(mainGrid3, "page3");
        	  	   	
      	//Advantages 
      	
@@ -507,8 +508,7 @@ Fenetre::Fenetre()
        background4_combo.signal_changed().connect(sigc::mem_fun(*this,
               &Fenetre::on_combobackground3_changed) );
               
-       //Virtues
-          	 
+       //Virtues         	 
         virtues_label.set_text("  ** Virtues **  ");   
      	virtues_label.set_justify(Gtk::JUSTIFY_LEFT); 	
      	mainGrid3.attach(virtues_label, 5, 1, 1,1);  
@@ -564,8 +564,20 @@ Fenetre::Fenetre()
     	mainGrid3.attach(blood_score_turn, 7, 8, 1, 1); 
 		
 	//////////////////////////////////PAGE4/////////////////////////////////	
-//	pages.append_page(mainGrid4, "page 4 ");
 
+	
+	
+	
+	
+	
+	//Freebie
+	
+		
+
+
+
+	
+	
 	//Signal des boutons forward & back & create
 	back.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::prev_page));
     	forward.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::next_page));

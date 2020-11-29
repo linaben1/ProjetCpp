@@ -65,7 +65,7 @@ int main() {
 
 #include <boost/algorithm/string.hpp>
 #include <cstddef>
-
+#include "strtk.hpp"
 
 #include <utility>
 #include <vector>
@@ -79,24 +79,63 @@ int main() {
 #include <vector>
 using namespace std;
 
+/*
 
+int main()
+{
+	
+			
+	regex pattern { "--.+(Merit)" };	
+	string pattern1 { "--zjerkjzreiuhelMerit" };	
+	bool result = regex_match(pattern1 , pattern); 	
 
-
-using namespace std;
-
-vector<string> split(const string &s, char delim) {
-    vector<string> result;
-    stringstream ss(s);
-    string item;
-    while (getline(ss, item, delim)) {
-        result.push_back(item);
-    }
-    return result;
+	if (result == 1) 
+	{
+		cout << "true" << endl;			
+	}	    
+	else
+	{
+		cout << "false" << endl;	
+	}
+	return 0 ;
 }
 
-int main() {
-    string str = "adsf+qwer+poui+fdgh";
-    vector<string> v = split(str, '+');
-    for (auto i : v) cout << i << endl;
-    return 0;
+*/
+
+int main()
+{
+	deque<string> liste;	
+ 	string line;
+ 	regex pattern { "--.+(Merit\\))" };
+ 	fstream fichier("file_part11.txt");
+	if ( !fichier ) cout << "fichier inexistant";
+	else 
+	{	
+		while(!fichier.eof())
+		{
+			getline(fichier, line);	
+			if (line.find("--") == 0)
+			{
+				//line.erase(line.begin()-0);
+				//line.erase(line.begin()-0);				
+				//liste_nature.push_back(line);
+				bool result = regex_match(line , pattern); 	
+				if (result == 1) 
+				{
+					line.erase(line.begin()-0);
+					line.erase(line.begin()-0);	
+					line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();line.pop_back();
+					
+			
+					liste.push_back(line);			
+				}
+			}
+		
+		}
+		
+	}			
+			
+
+	return 0 ;
 }
+
