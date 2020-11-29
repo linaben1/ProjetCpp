@@ -122,8 +122,10 @@ Fenetre::Fenetre()
 	generation_combo.append("15th");
 
 	mainGrid.attach(generation_combo, 5, 1, 1, 1);
- 	
+ 	generation_combo.signal_changed().connect( sigc::mem_fun(*this,
+            &Fenetre::on_combogeneration_changed) );
 	
+ 	
     	//Sire
     	sire_label.set_text("  Sire:  ");
  	mainGrid.attach(sire_label, 4, 2, 1, 1);
@@ -551,7 +553,19 @@ Fenetre::Fenetre()
 
     	mainGrid3.attach(willpower_label, 7, 3, 1, 1); 
     	mainGrid3.attach(willpower_score, 7, 4, 1, 1); 
-    	    	
+    	
+    	//Blood pool    	
+    	blood_label.set_text(" Blood Pool "); 
+    	blood_turn_label.set_text(" Blood Per Turn "); 
+    	
+    	mainGrid3.attach(blood_label, 7, 5, 1, 1); 
+    	mainGrid3.attach(blood_score, 7, 6, 1, 1); 
+    	mainGrid3.attach(blood_turn_label, 7, 7, 1, 1); 
+    	mainGrid3.attach(blood_score_turn, 7, 8, 1, 1); 
+		
+	//////////////////////////////////PAGE4/////////////////////////////////	
+//	pages.append_page(mainGrid4, "page 4 ");
+
 	//Signal des boutons forward & back & create
 	back.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::prev_page));
     	forward.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::next_page));
@@ -563,6 +577,10 @@ Fenetre::Fenetre()
     	create_button.add_pixlabel("info.xpm", "Open File");
     	
   	show_all_children();
+  	background2_combo.hide();
+  	background3_combo.hide();
+  	background4_combo.hide();
+  	background5_combo.hide();
 }
 
 Fenetre::~Fenetre() 
@@ -605,7 +623,33 @@ void Fenetre::on_combo_changed() //Signal du changement de la combobox de clan q
  	
  	liste_discip.clear();  		
 }
+////////////////////////////////////////////////////////////////////////
 
+void Fenetre::on_combogeneration_changed() //Signal du changement de la combobox de génération
+{
+	string text_generation = generation_combo.get_active_text();
+	
+	if(text_generation != "")
+	{
+		if(text_generation == "4th"){ blood_score.set_text("50"); blood_score_turn.set_text("10"); }
+		else if (text_generation == "5th"){blood_score.set_text("40"); blood_score_turn.set_text("8"); }
+		else if(text_generation == "6th"){blood_score.set_text("30"); blood_score_turn.set_text("6"); }
+		else if(text_generation == "7th"){ blood_score.set_text("20"); blood_score_turn.set_text("5"); }	
+		else if(text_generation == "8th"){ blood_score.set_text("15"); blood_score_turn.set_text("3"); }
+		else if(text_generation == "9th"){blood_score.set_text("14"); blood_score_turn.set_text("2"); }
+		else if(text_generation == "10th"){blood_score.set_text("13"); blood_score_turn.set_text("1"); }
+		else if(text_generation == "11th"){blood_score.set_text("12"); blood_score_turn.set_text("1"); }
+		else if(text_generation == "12th"){blood_score.set_text("11"); blood_score_turn.set_text("1"); }
+		else if(text_generation == "13th"){blood_score.set_text("10"); blood_score_turn.set_text("1"); }
+		else if(text_generation == "14th"){blood_score.set_text("10"); blood_score_turn.set_text("1"); }
+		else{blood_score.set_text("9"); blood_score_turn.set_text("1"); }
+	}
+	else
+	{
+		blood_score.set_text("0"); 
+    		blood_score_turn.set_text("0"); 			
+	}
+}
 
 ////////////////////////////////////////////////////////////////////////
 void Fenetre::on_combobackground_changed() //Signal du changement de la combobox 1 de background 
@@ -624,6 +668,7 @@ void Fenetre::on_combobackground_changed() //Signal du changement de la combobox
         		  		       		     	
         	}       	       	
 	}
+	background2_combo.show();
 }
 ////////////////////////////////////////////////////////////////////////
 void Fenetre::on_combobackground1_changed() //Signal du changement de la combobox 2 de background 
@@ -642,6 +687,7 @@ void Fenetre::on_combobackground1_changed() //Signal du changement de la combobo
         			background3_combo.append(backgroundName_list[i]);        	        		
         	}
 	}
+	background3_combo.show();
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -663,6 +709,7 @@ void Fenetre::on_combobackground2_changed() //Signal du changement de la combobo
         			background4_combo.append(backgroundName_list[i]);        	        		
         	}
 	}
+	background4_combo.show();
 }
 
 
@@ -686,6 +733,7 @@ void Fenetre::on_combobackground3_changed() //Signal du changement de la combobo
         			background5_combo.append(backgroundName_list[i]);        	        		
         	}
 	}
+	background5_combo.show();
 }
 
 
@@ -748,7 +796,6 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		condition_total--;
 	}		
 */	/////////////////////////////Verifier l'attribution des points pour les abilities
-
 
 	//Récuppération des points attribué au talents
 	int score_alertness = spin_alertness.get_value_as_int() , score_athletics = spin_athletics.get_value_as_int() , score_awareness = spin_awareness.get_value_as_int(), score_brawl = spin_brawl.get_value_as_int() , score_empathy = spin_empathy.get_value_as_int() , score_expression = spin_expression.get_value_as_int() , score_intimidation = spin_intimidation.get_value_as_int() , score_leadership = spin_leadership.get_value_as_int() , score_streetwise = spin_streetwise.get_value_as_int(), score_subterfuge = spin_subterfuge.get_value_as_int();
@@ -824,8 +871,8 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 				if(text_generation != "13th")
 				{			
 					condition_total--;
-					Gtk::MessageDialog dialog(*this, " If you have chosen generation in the backgrounds you must choose the 13th generation for your game character!",false,Gtk::MESSAGE_ERROR);
-					dialog.run();				
+					/*Gtk::MessageDialog dialog(*this, " If you have chosen generation in the backgrounds you must choose the 13th generation for your game character!",false,Gtk::MESSAGE_ERROR);
+					dialog.run();		*/		
 				}		
 			}	
 		}
@@ -855,7 +902,6 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 	*/
 	
 
-
 	if(condition_total == 10)
 	{
 		//Récupération des info rentrer par le joueur 
@@ -869,9 +915,10 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		string sir = sire_entry.get_text();
 		string hum = humanity_score.get_text();
 		string wil = willpower_score.get_text();
-					
-		
-		//Envoie les information a notre classe personnage
+		string blood = blood_score.get_text(); 
+    		string bloodt = blood_score_turn.get_text(); 
+			
+		//Envoie les information aux différentes classe afin de pouvroi les récuperer aprés pour le dessin de la feuille de personnage 
 		personnage.setNomPersonnage(nomP);	// nom du personnage 
 		clan.SetPlayername(nomJ); // nom du joueur 
 		personnage.setChronicle(chronic); // la chronicle 
@@ -882,13 +929,11 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		personnage.setSire(sir); //le sire 
 		personnage.setHumanity(hum); //le score de l'humanity
 		personnage.setWillpower(wil); //le score de willpower
+		otherTraits.setBloodpool(blood); //le niveau de sang du personnage 
+		otherTraits.setBloodpoolturn(bloodt); //le niveau de blood per turn
 		
-
-		Feuille_Vampire.show(); 
-		
+		Feuille_Vampire.show(); 		
 	}
-	
-
 }
 
 ///////////////////////////////////////////////
@@ -935,8 +980,7 @@ DrawImage::~DrawImage()
 //Dessiner sur la fiche du personnage 
 bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 {
-	//Récupération de tous les choix du joueur 
-	
+	//Récupération de tous les choix du joueur 	
 	string name = personnage.getNomPersonnage();	// nom du personnage 
 	string player = clan.GetPlayername(); // nom du joueur 
 	string chron = personnage.getChronicle(); // la chronicle 
@@ -947,9 +991,10 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	string sir =  personnage.getSire(); //nom du sire
 	string hu =  personnage.getHumanity(); //point attribué a humanity
 	string wi =  personnage.getWillpower(); //nom du sire
+	string bloo = otherTraits.getBloodpool(); //blood pool
+	string bloot = otherTraits.getBloodpoolturn(); //blood pool per turn
 	
 	//Les points pour chaque élément d'attributs 
-
 	int strenght = attribut[0], dexterity = attribut[1] , stamina = attribut[2] ,charisma = attribut[3] ,manipulation = attribut[4] ,appearance = attribut[5] ,perception = attribut[6] ,intelligence = attribut[7] ,wits = attribut[8] ;
 		
 	//Les points pour chaque élément d'abilities
@@ -1050,12 +1095,11 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	draw_text(cr, 368 , 1190 , to_string(discip3));
 	
 	//Background 
-
-	draw_text(cr, 568 , 1118 , background1);
-	draw_text(cr, 568 , 1155 , background2);	
-	draw_text(cr, 568 , 1190 , background3);
-	draw_text(cr, 568 , 1225 , background4);	
-	draw_text(cr, 568 , 1260 , background5);
+	draw_text(cr, 578 , 1118 , background1);
+	draw_text(cr, 578 , 1155 , background2);	
+	draw_text(cr, 578 , 1190 , background3);
+	draw_text(cr, 578 , 1225 , background4);	
+	draw_text(cr, 578 , 1260 , background5);
 	
 	draw_text(cr, 768 , 1118 , to_string(backgroundP1));
 	draw_text(cr, 768 , 1155 , to_string(backgroundP2));
@@ -1063,8 +1107,7 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	draw_text(cr, 768 , 1225 , to_string(backgroundP4));
 	draw_text(cr, 768 , 1260 , to_string(backgroundP5));
 	
-	//Virtues
-	
+	//Virtues	
 	draw_text(cr, 1168 , 1118 , to_string(virtue1));
 	draw_text(cr, 1168 , 1190 , to_string(virtue2));
 	draw_text(cr, 1168 , 1255 , to_string(virtue3));
@@ -1073,19 +1116,20 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	draw_text(cr, 668 , 1400 , hu);
 	draw_text(cr, 668 , 1560 , wi);
 	
+	//Blood pool
+	draw_text(cr, 668 , 1680 , bloo);
+	draw_text(cr, 780 , 1800 , bloot);
+		
 	return true;
 		
 }
     
 void DrawImage::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int rectangle_width, int rectangle_height, Glib::ustring text)
 {
-
   Pango::FontDescription font;
-
   font.set_family("Monospace");
   font.set_weight(Pango::WEIGHT_ULTRABOLD);
 
- 
   auto layout = create_pango_layout(text);
 
   layout->set_font_description(font);
@@ -1098,7 +1142,6 @@ void DrawImage::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int rectangle
 
   // Position the text in the middle
   cr->move_to((rectangle_width-text_width)/2, (rectangle_height-text_height)/2);
-
   layout->show_in_cairo_context(cr);
 } 	
      	/*    	

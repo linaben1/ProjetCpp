@@ -4,6 +4,39 @@
 
 
 /****************************************************************************************************************************************************************/
+/** Fonction qui recupere et renvoie le niveau du sang  **/
+
+
+
+void  OtherTraits::setBloodpool(string blo)
+{
+	bloodPool = blo;
+}
+
+string  OtherTraits::getBloodpool()
+{
+	return bloodPool;
+}
+
+
+/****************************************************************************************************************************************************************/
+/** Fonction qui recupere et renvoie le turn blood  **/
+
+
+
+void  OtherTraits::setBloodpoolturn(string bloo)
+{
+	bloodPoolturn = bloo;
+}
+
+string  OtherTraits::getBloodpoolturn()
+{
+	return bloodPoolturn;
+}
+
+
+
+/****************************************************************************************************************************************************************/
 /** Fonction qui renvoie la liste des background disponible dans le fichier background.txt **/
 deque<string> OtherTraits::background_list()
 {
@@ -26,8 +59,6 @@ deque<string> OtherTraits::background_list()
 	    }	
 	return liste_background ;
 }
-
-
 
 
 

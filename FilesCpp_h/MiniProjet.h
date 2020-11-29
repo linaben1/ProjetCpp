@@ -140,45 +140,23 @@ class Abilities
 		int getPoints(int);
 	
 		
-		int check_abilitiespointabilities(const string &combinaisonPoints, int, int , int );//pour tester l'attribution des points aux abilities
+		int check_abilitiespointabilities(string, int, int , int );//pour tester l'attribution des points aux abilities
 };
 
 
 /********************************************************************************************************/
 class OtherTraits
 {
-	protected:
-		
-		int nbPointsBackground;
-		vector <string> backgroundName;
-		vector <int> backgroundPoints;
-		
-		int nbPointsVirtues;
-		int conscience;
-		int selfControl;
-		int courage;
-		
-		int humanity; 	// (equal to Conscience + Self-Control), 
-		int willpower; 	//(equal to Courage)
-		int bloodPool;
-		
-		int nbPointsMeritsAndFlawsMAX;
-		int nbPointsMeritsAndFlaws;
-		vector <string> meritsAndFlaws;
-		vector <int> valueMeritsAndFlaws;
-
-	public:
-
+	protected:		
+		string bloodPool;
+		string bloodPoolturn;			
+	public:	
+		void setBloodpool(string);
+		string getBloodpool(); 
+		void setBloodpoolturn(string);
+		string getBloodpoolturn(); 
 		deque<string> background_list();
-		void InitTraits();		
-		void SetBackground(string, int);
-		void setVirtuesPoints(string, int);
-		int getVirtuesPoints();
-		int getConsience();
-		int getSelfControl();
-		int getCourage();
-		void setHumanity();
-		void setWillPower();
+		
 };
 
 /********************************************************************************************************/
@@ -275,14 +253,14 @@ class Fenetre : public Gtk::Window
         Fenetre();
         virtual ~Fenetre(); //Le destructeur pour pouvoir détruire le bouton.
 	void on_combo_changed(); //signal de changement de clan
+	void on_combogeneration_changed(); //signal de changement de generation 
 	void on_combobackground_changed() ; //signal de changement de background 1
 	void on_combobackground1_changed() ;
 	void on_combobackground2_changed() ;
 	void on_combobackground3_changed() ;
 	void on_combobackground4_changed() ;
-	void on_combogeneration_changed() ; //signal de changement de background 1
-	void create_button_clicked();
 	void spin_virtues_clicked();  //signal de changement des virtues 
+	void create_button_clicked();
 	Fenetre_Vampire Feuille_Vampire;	
     
     protected :
@@ -291,7 +269,8 @@ class Fenetre : public Gtk::Window
   	Gtk::Image image;
 
     	//Les différents GRIDs 
-        Gtk::Grid mainGrid, mainGrid2, mainGrid3; //Création du pointeur sur bouton.
+        Gtk::Grid mainGrid, mainGrid2, mainGrid3;
+        //, mainGrid4; //Création du pointeur sur bouton.
         
         //BOX
         Gtk::VBox boxV;

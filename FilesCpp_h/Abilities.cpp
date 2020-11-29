@@ -67,7 +67,7 @@ int Abilities::getValueKnowledges(int index)
 /****************************************************************************************************************************************************************/
 /** Fonction qui permet de fixer une condition pour ensuite la vérifier afin de controller la distribution des points dans les différents catégories des abilities
  */
-int Abilities::check_abilitiespointabilities(const string &combinaisonPoints, int talents, int skills , int knowledges  )
+int Abilities::check_abilitiespointabilities(string combinaisonPoints, int talents, int skills , int knowledges  )
 {		
 
 	int condition = 0 ;
