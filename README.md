@@ -26,5 +26,6 @@ Afin de pouvoir faire tourner ce programme il faut au préalable installer :
     6- excuter la commande make
     7- excuter ./FilesCpp_h/VampireProjet 
     
+    ATTENTION ! Si tous les conditions ne sont pas remplis dans la 1 ere interface (c'est a dire par exemple les points disstribué au attributs correspondant a la combinaison choisi .. etc) la fiche du personnage ne s'affichera pas. 
         
 
