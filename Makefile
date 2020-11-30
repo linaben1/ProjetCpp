@@ -12,7 +12,7 @@ CC=g++
 
 ######################
 # All the object files      
-OBJFILES = $(OBJDIR)/MiniMain.o $(OBJDIR)/Clan.o $(OBJDIR)/OtherTraits.o $(OBJDIR)/Attributs.o  $(OBJDIR)/Abilities.o  $(OBJDIR)/Personnage.o $(OBJDIR)/window.o
+OBJFILES = $(OBJDIR)/Main.o $(OBJDIR)/Clan.o $(OBJDIR)/OtherTraits.o $(OBJDIR)/Attributs.o  $(OBJDIR)/Abilities.o  $(OBJDIR)/Personnage.o $(OBJDIR)/window.o
 
 ###############
 # All the flagss

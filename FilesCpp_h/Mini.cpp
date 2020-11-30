@@ -1,4 +1,4 @@
-#include "MiniProjet.h"
+#include "Projet.h"
 
 /********************************************************************************************************/
 void DistributionPoints::InitAdvantages()

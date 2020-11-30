@@ -1,4 +1,4 @@
-#include "MiniProjet.h"
+#include "Projet.h"
 
 Clan clan;
 OtherTraits otherTraits;
@@ -9,25 +9,25 @@ Personnage personnage;
 /****************************************************************************************************************************************************************/
 /****************************************************************************************************************************************************************/
 /****************************************************************************************************************************************************************/
-
 deque <int> attribut; //deque contenant les points attributé a chaque éléments des attributs qui nous permet de remplir le formulaire 
 deque <int> abilitie; //deque contenant les points attributé a chaque éléments des abilities qui nous permet de remplir le formulaire 
 deque <int> discipline; //deque contenant les points attributé a chaque éléments de disciplines qui nous permet de remplir le formulaire 
 deque <int> background; //deque contenant les points attributé a chaque éléments des background qui nous permet de remplir le formulaire 
 deque <string> backgroundListe; //deque contenant la liste des background choisi par l'utilisateur 
 deque <int> virtues; //deque contenant les points attributé a chaque éléments de virtues qui nous permet de remplir le formulaire 
+deque <int> merits; //deque contenant les points attributé a chaque éléments des merits qui nous permet de remplir le formulaire 
+deque <string> meritsListe; //deque contenant la liste des merites choisi par l'utilisateur 
+string allies , contacts , fame, herd, influence , mentor , resources , retainers , status , other ; //string pour récuperer les différents entré des extanded background 
+string  haven_location , haven_description;//string pour récuperer les différents entré de haven
 
 Fenetre::Fenetre()
 : boxV (Gtk :: ORIENTATION_HORIZONTAL, 12),back(Gtk::Stock::GO_BACK),forward(Gtk::Stock::GO_FORWARD), image("Images/image_1.jpg")
 {
 	
 	set_title("Vampire Interface");
-
 	set_border_width(10);
 	set_position(Gtk::WIN_POS_CENTER);
-
-	resize(300, 300); 	
-		
+	resize(300, 300); 			
 	add(boxV);
 	
 	//Ajout d'une image a mon interface	
@@ -45,8 +45,6 @@ Fenetre::Fenetre()
    	  	
    	boxV.pack_start(FBBoutons);
    	boxV.pack_end(VBoutons);
-    
-
 
 	//Création des différentes pages
 	
@@ -90,8 +88,7 @@ Fenetre::Fenetre()
 	}		
     	mainGrid.attach(nature_combo, 3, 0, 1, 1);
     	mainGrid.attach(demeanor_combo, 3, 1, 1, 1);
-    	
-    
+    	   
    	//Concept
     	concept_label.set_text("  Concept:  ");
  	mainGrid.attach(concept_label, 2, 2, 1, 1);
@@ -128,15 +125,13 @@ Fenetre::Fenetre()
 	mainGrid.attach(generation_combo, 5, 1, 1, 1);
  	generation_combo.signal_changed().connect( sigc::mem_fun(*this,
             &Fenetre::on_combogeneration_changed) );
-	
- 	
+		
     	//Sire
     	sire_label.set_text("  Sire:  ");
  	mainGrid.attach(sire_label, 4, 2, 1, 1);
    	sire_entry.set_max_length(50);
     	mainGrid.attach(sire_entry, 5, 2, 1, 1);   	
-			
-    	
+			   	
     	//Choix de la combinaison de points pour les différents catégories d'attributs	
  	DistributionPointsAttribut_label.set_text(" Choose the combination for points distributed to attributes (PHYSICAL, SOCIAL, MENTAL) * : ");
         mainGrid.attach(DistributionPointsAttribut_label, 0 , 3, 2, 1);
@@ -149,8 +144,7 @@ Fenetre::Fenetre()
 	DistributionPointsAttribut_combo.append("5/7/3");
 	
 	mainGrid.attach(DistributionPointsAttribut_combo, 2 , 3, 1, 1); 	
-    
-   	
+       	
   	//Attributs
    	attributs_label.set_text("#########  ATTRIBUTS  #########");   
      	attributs_label.set_justify(Gtk::JUSTIFY_LEFT); 	
@@ -181,7 +175,6 @@ Fenetre::Fenetre()
      	spin_stamina.set_range(1,5);
 	spin_stamina.set_increments(1,1);	  
 		
-
      	//Attributs social
      	charisma_label.set_text(" Charisma ");     		
      	mainGrid.attach(charisma_label, 2, 6, 1,1);    	
@@ -437,9 +430,7 @@ Fenetre::Fenetre()
      	mainGrid2.attach(spin_science, 5, 11, 1, 1);
      	mainGrid2.attach(spin_technology, 5, 12, 1, 1);  
      	
-   
-    	  //////////////////PAGE3////////////////////////////////////
-       	  	   	
+    	  //////////////////PAGE3////////////////////////////////////       	  	   	
      	//Advantages 
      	
      	advantages_label.set_text("#########  ADVANTAGES  #########");   
@@ -509,7 +500,7 @@ Fenetre::Fenetre()
               &Fenetre::on_combobackground3_changed) );
               
        //Virtues         	 
-        virtues_label.set_text("  ** Virtues **  ");   
+        virtues_label.set_text("  ** VIRTUES **  ");   
      	virtues_label.set_justify(Gtk::JUSTIFY_LEFT); 	
      	mainGrid3.attach(virtues_label, 5, 1, 1,1);  
      		 
@@ -564,20 +555,131 @@ Fenetre::Fenetre()
     	mainGrid3.attach(blood_score_turn, 7, 8, 1, 1); 
 		
 	//////////////////////////////////PAGE4/////////////////////////////////	
+	//Merits
+	merits_label.set_text("  ** MERITS **  ");   
+     	merits_label.set_justify(Gtk::JUSTIFY_LEFT); 	
+     	mainGrid4.attach(merits_label, 2, 1, 1,1);
 
+        merits_list = otherTraits.merits_list();        
+        for(auto i=0; i<merits_list.size(); ++i)
+        {	
+		merits1_combo.append(merits_list[i]);
+	}		
+    	mainGrid4.attach(merits1_combo, 2, 2, 1, 1);
+    	mainGrid4.attach(merits2_combo, 2, 3, 1, 1);
+    	mainGrid4.attach(merits3_combo, 2, 4, 1, 1); 
+   	
+    	spin_merits1.set_range(0,5);
+	spin_merits1.set_increments(1,1); 
 	
+	mainGrid4.attach(spin_merits1, 3, 2, 1, 1);
+    	mainGrid4.attach(spin_merits2, 3, 3, 1, 1);
+    	mainGrid4.attach(spin_merits3, 3, 4, 1, 1); 
 	
+	//merits signaux 
+	merits1_combo.signal_changed().connect(sigc::mem_fun(*this,
+              &Fenetre::on_combomerits_changed) );
+	merits2_combo.signal_changed().connect(sigc::mem_fun(*this,
+              &Fenetre::on_combomerits1_changed) );
 	
+	//Flaws
+	//flaws_label.set_text("  ** FLAWS **  ");   
+     	//flaws_label.set_justify(Gtk::JUSTIFY_LEFT); 	
+     	//mainGrid4.attach(flaws_label, 5, 1, 1,1);
+ 	//flaws_list = otherTraits.flaws_list();        
+        //for(auto i=0; i<flaws_list.size(); ++i)
+        //{	
+	//	flaws2_combo.append(flaws_list[i]);
+	//}
 	
+	//spin_flaws1.set_range(0,5);
+	//spin_flaws1.set_increments(1,1); 
 	
-	//Freebie
+	//mainGrid4.attach(flaws1_combo, 2, 2, 1, 1);   // Enlever Car probleme d'encodage !!!
+    	//mainGrid4.attach(flawss2_combo, 2, 3, 1, 1);
+    	//mainGrid4.attach(flaws3_combo, 2, 4, 1, 1); 
+   	
+    	//spin_merits1.set_range(0,5);
+	//spin_merits1.set_increments(1,1); 
 	
-		
+	//mainGrid4.attach(spin_flaws1, 3, 2, 1, 1);
+    	//mainGrid4.attach(spin_flaws2, 3, 3, 1, 1);
+    	//mainGrid4.attach(spin_flaws3, 3, 4, 1, 1); 
 
+	//Weakness (faiblesse du personnage)
+     	weakness_label.set_text("  Weakness:  ");     		
+     	mainGrid4.attach(weakness_label, 5, 1, 1,1);
+     	weakness_entry.set_max_length(50);
+   	mainGrid4.attach(weakness_entry, 6, 1, 1, 1);
+   	
+   	
+   	//Expande dBackground
+     	expandedBackground_label.set_text(" #### Expanded Backgrounds ####  ");     		
+     	mainGrid4.attach(expandedBackground_label, 6, 2, 1,1);
+     	
+     	allies_label.set_text(" Allies ");     		
+     	mainGrid4.attach(allies_label, 5, 3, 1,1);
+     	allies_entry.set_max_length(50);
+   	mainGrid4.attach(allies_entry, 6, 3, 1, 1);
+     	
+     	contacts_label.set_text(" contacts ");     		
+     	mainGrid4.attach(contacts_label, 5, 4, 1,1);   	
+     	contacts_entry.set_max_length(50);
+   	mainGrid4.attach(contacts_entry, 6, 4, 1, 1);
+   	
+   	fame_label.set_text(" fame ");     		
+     	mainGrid4.attach(fame_label, 5, 5, 1,1);     	
+     	fame_entry.set_max_length(50);
+   	mainGrid4.attach(fame_entry, 6, 5, 1, 1);
+ 	
+   	herd_label.set_text(" herd ");     		
+     	mainGrid4.attach(herd_label, 5, 6, 1,1);     	
+     	herd_entry.set_max_length(50);
+   	mainGrid4.attach(herd_entry, 6, 6, 1, 1);
+   	
+   	influence_label.set_text(" influence ");     		
+     	mainGrid4.attach(influence_label, 5, 7, 1,1);   	
+     	influence_entry.set_max_length(50);
+   	mainGrid4.attach(influence_entry, 6, 7, 1, 1);  	
+ 
+   	mentor_label.set_text(" mentor ");     		
+     	mainGrid4.attach(mentor_label, 5, 8,1,1);    	
+     	mentor_entry.set_max_length(50);
+   	mainGrid4.attach(mentor_entry, 6, 8, 1, 1);
+   	   	
+   	resources_label.set_text(" resources ");     		
+     	mainGrid4.attach(resources_label, 5, 9, 1,1);     	
+     	resources_entry.set_max_length(50);
+   	mainGrid4.attach(resources_entry, 6, 9, 1, 1);
+   	
+   	
+   	retainers_label.set_text(" retainers ");     		
+     	mainGrid4.attach(retainers_label, 5,10, 1,1);    	
+     	retainers_entry.set_max_length(50);
+   	mainGrid4.attach(retainers_entry, 6, 10, 1, 1);
+   	
+   	status_label.set_text(" status ");     		
+     	mainGrid4.attach(status_label, 5, 11, 1,1);   	
+     	status_entry.set_max_length(50);
+   	mainGrid4.attach(status_entry, 6, 11, 1, 1);
 
-
-	
-	
+  	//Haven      	
+     	haven_label.set_text("###########  HAVEN  ###########");   
+     	haven_label.set_justify(Gtk::JUSTIFY_LEFT); 	
+     	mainGrid4.attach(haven_label, 8, 1, 1,1);
+  
+ 	//Localisation de Haven
+     	haven_location_label.set_text("  Location:  ");     		
+     	mainGrid4.attach(haven_location_label,8 , 2, 1,1);
+     	location_entry.set_max_length(50);
+   	mainGrid4.attach(location_entry, 8, 3, 1, 1);
+    	
+    	//Description de Haven
+     	haven_description_label.set_text("  Description:  ");     		
+     	mainGrid4.attach(haven_description_label, 8, 4, 1,1);
+     	description_entry.set_max_length(50);
+   	mainGrid4.attach(description_entry, 8, 5, 1, 1);
+ 
 	//Signal des boutons forward & back & create
 	back.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::prev_page));
     	forward.signal_clicked().connect(sigc::mem_fun(pages, &Gtk::Notebook::next_page));
@@ -593,6 +695,9 @@ Fenetre::Fenetre()
   	background3_combo.hide();
   	background4_combo.hide();
   	background5_combo.hide();
+  	merits2_combo.hide();
+  	merits3_combo.hide();
+
 }
 
 Fenetre::~Fenetre() 
@@ -759,21 +864,63 @@ void Fenetre::spin_virtues_clicked() //Signal du changement de la combobox 1 de 
 	willpower_score.set_text(to_string(willp)); 
 }
 
+////////////////////////////////////////////////////////////////////////
+void Fenetre::on_combomerits_changed() //Signal du changement de la combobox 1 de merits 
+{
+	spin_merits2.set_range(0,7);
+	spin_merits2.set_increments(1,1); 	
+	//On récupere le choix du merits de l'utilisateur 
+	string text_meritsname =merits1_combo.get_active_text();
+	merits2_combo.remove_all();
+	merits_list = otherTraits.merits_list();        
+        for(auto i=0; i<merits_list.size(); ++i)
+        {	
+        	if(text_meritsname != merits_list[i] )
+        	{      	
+        		merits2_combo.append(merits_list[i]); 
+        		  		       		     	
+        	}       	       	
+	}
+	merits2_combo.show();
+}
+
+////////////////////////////////////////////////////////////////////////
+void Fenetre::on_combomerits1_changed() //Signal du changement de la combobox 2 de merits 
+{	
+	//On récupere le choix merits précédent
+	spin_merits3.set_range(0,5);
+	spin_merits3.set_increments(1,1); 
+	
+	string text_meritsname =merits1_combo.get_active_text();
+	string text_meritsname2 =merits2_combo.get_active_text();	
+	merits3_combo.remove_all();
+	for(auto i=0; i<merits_list.size(); ++i)
+        {	
+        	if( text_meritsname != merits_list[i] && text_meritsname2 != merits_list[i])
+        	{     
+        		 	if( text_meritsname2 != merits_list[i]){merits3_combo.append(merits_list[i]);}     	        		
+        	}
+	}
+	merits3_combo.show();
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 void Fenetre::create_button_clicked() //Signal du changement de la combobox
 {
-/*	//Récupération des signaux 
+	//Récupération des signaux 
 	string text_pointattributs = DistributionPointsAttribut_combo.get_active_text();
-	string text_pointabilities = DistributionPointsAbilities_combo.get_active_text();*/
+	string text_pointabilities = DistributionPointsAbilities_combo.get_active_text();
 	string text_clanname = Clan_combo.get_active_text();
 		
 	int condition_total = 10 ;
-/*	//Verification si le joueur a bien sélectionné un nom de clan et les combinaison nécéssaire pour les attribution des points 
+	//Verification si le joueur a bien sélectionné un nom de clan et les combinaison nécéssaire pour les attribution des points 
 	if(text_clanname == "" || text_pointabilities == "" || text_pointattributs == "" )
 	{
 		condition_total-- ;
+		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();	
 	}
-*/	/////////////////////////////Verifier l'attribution des points pour les attributs 
+	/////////////////////////////Verifier l'attribution des points pour les attributs 
 	//point physic
 	int score_strength = spin_strength.get_value_as_int() , score_dexterity = spin_dexterity.get_value_as_int() , score_stamina = spin_stamina.get_value_as_int();
 	
@@ -783,8 +930,7 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 	
 	//Récupération des points attribué au caractere social
 	int score_charisma = spin_charisma.get_value_as_int() , score_manipulation = spin_manipulation.get_value_as_int() , score_appearance = spin_appearance.get_value_as_int();
-	
-	
+		
 	int score_social_total = score_charisma + score_manipulation + score_appearance  ;     	  
      	if ( text_clanname != "Nosferatu")
  	{	
@@ -802,12 +948,14 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 	
 	attribut.push_back(score_perception) ; attribut.push_back(score_intelligence) ; attribut.push_back(score_wits);
 	//Vérification de la condition d'attribution des points aux attributs par le joueur				
-//	int condition_attributs = attributes.check_attributspoint(text_pointattributs , score_physical_total , score_social_total , score_mental_total  );
-/*	if(condition_attributs == 1 )
+	int condition_attributs = attributes.check_attributspoint(text_pointattributs , score_physical_total , score_social_total , score_mental_total  );
+	if(condition_attributs == 1 )
 	{
+		Gtk::MessageDialog dialog(*this, " The distribution of attribute points does not conform to the chosen distribution combination !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();
 		condition_total--;
 	}		
-*/	/////////////////////////////Verifier l'attribution des points pour les abilities
+	/////////////////////////////Verifier l'attribution des points pour les abilities
 
 	//Récuppération des points attribué au talents
 	int score_alertness = spin_alertness.get_value_as_int() , score_athletics = spin_athletics.get_value_as_int() , score_awareness = spin_awareness.get_value_as_int(), score_brawl = spin_brawl.get_value_as_int() , score_empathy = spin_empathy.get_value_as_int() , score_expression = spin_expression.get_value_as_int() , score_intimidation = spin_intimidation.get_value_as_int() , score_leadership = spin_leadership.get_value_as_int() , score_streetwise = spin_streetwise.get_value_as_int(), score_subterfuge = spin_subterfuge.get_value_as_int();
@@ -830,13 +978,15 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 	
 	int score_knowledges_total = score_academics + score_computer + score_finance + score_investigation + score_law + score_medicine + score_occult + score_politics + score_science + score_technology ;
 
-/*	//Vérification de la condition d'attribution des points aux attributs par le joueur
-	int condition_abilities = abilities.check_attributspointabilities(text_pointabilities , score_talents_total , score_skills_total , score_knowledges_total  );
+	//Vérification de la condition d'attribution des points aux abilities par le joueur
+	int condition_abilities = abilities.check_abilitiespointabilities(text_pointabilities , score_talents_total , score_skills_total , score_knowledges_total  );
 	if(condition_abilities == 1 )
 	{
+		Gtk::MessageDialog dialog(*this, " The distribution of abilitie points does not conform to the chosen distribution combination !",false,Gtk::MESSAGE_ERROR);
+		dialog.run();
 		condition_total--;
 	}	
-*/		
+		
 	///////////////////////Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
   	int score1 = spin_discipl1.get_value_as_int();
   	int score2 = spin_discipl2.get_value_as_int();
@@ -844,14 +994,14 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
  	discipline.push_back(score1) ; discipline.push_back(score2); discipline.push_back(score3);
  	int score_dicipl = score1 + score2 + score3  ; 
  	
- 	/*	
+ 		
  	if (score_dicipl != 3 )
  	{		
  		Gtk::MessageDialog dialog(*this, " The total points awarded to disciplines  must be equal to 3 !",false,Gtk::MESSAGE_ERROR);
 		dialog.run();	
  		condition_total--;	
  	}
-	*/
+	
 	//////////////////////Récuperer les points attribué pour chaque discipline et s'assurer qu'il soit égale a 3 
   	int score1_background = spin_background1.get_value_as_int();
   	int score2_background = spin_background2.get_value_as_int();
@@ -860,14 +1010,14 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
  	int score5_background = spin_background5.get_value_as_int();
  	background.push_back(score1_background); background.push_back(score2_background); background.push_back(score3_background); background.push_back(score4_background);background.push_back(score5_background);
  	int score_background = score1_background + score2_background + score3_background + score4_background +score5_background  ; 
- 	/*	
+ 		
  	if (score_background != 5 )
  	{		
  		Gtk::MessageDialog dialog(*this, " The total points awarded to disciplines  must be equal to 5 !",false,Gtk::MESSAGE_ERROR);
 		dialog.run();	
  		condition_total--;	
  	}
-*/
+
 	//////////////////////Vérifier si c'est on a choisi la bonne génération car si on choisi pas génération dans le background le personnage sera assigné automatiquement a la 13 eme génération 	
 		//Récupération du champ du dernier background si présent 
 		 
@@ -889,14 +1039,6 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 			}	
 		}
 	}
-	
-/*	if(condition_total != 10)
-	{
-		Gtk::MessageDialog dialog(*this, " Please choose a desired combination of points for abilities & attributes & Clan Name before proceeding next !",false,Gtk::MESSAGE_ERROR);
-		dialog.run();	
-	}
-*/	
-
 
 	//Récuperer les points attribué pour chaque virtues et s'assurer qu'il soit égale a 7
   	int score1_virtue = spin_conscience.get_value_as_int();
@@ -904,15 +1046,21 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
  	int score3_virtue = spin_courage.get_value_as_int();
  	virtues.push_back(score1_virtue) ; virtues.push_back(score2_virtue); virtues.push_back(score3_virtue);
  	int score_virtue = score1_virtue + score2_virtue + score3_virtue  ; 	
- 	/*	
+ 		
  	if (score_virtue != 7 )
  	{		
  		Gtk::MessageDialog dialog(*this, " The total points awarded to disciplines  must be equal to 7 !",false,Gtk::MESSAGE_ERROR);
 		dialog.run();	
  		condition_total--;	
  	}
-	*/
 	
+	
+	//Récupération des merits et leurs score 
+	meritsListe.push_back(merits1_combo.get_active_text()); meritsListe.push_back(merits2_combo.get_active_text()); meritsListe.push_back(merits3_combo.get_active_text());
+	int score1_merits = spin_merits1.get_value_as_int();
+  	int score2_merits = spin_merits2.get_value_as_int();
+ 	int score3_merits = spin_merits3.get_value_as_int();
+ 	merits.push_back(score1_merits); merits.push_back(score2_merits); merits.push_back(score3_merits);
 
 	if(condition_total == 10)
 	{
@@ -929,7 +1077,10 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		string wil = willpower_score.get_text();
 		string blood = blood_score.get_text(); 
     		string bloodt = blood_score_turn.get_text(); 
-			
+    		string weaknes = weakness_entry.get_text();
+    		allies = allies_entry.get_text() , contacts = contacts_entry.get_text(), fame = fame_entry.get_text(), herd = herd_entry.get_text(), influence = influence_entry.get_text() , mentor = mentor_entry.get_text() , resources = resources_entry.get_text() , retainers = retainers_entry.get_text() , status = status_entry.get_text()  ;
+		haven_location = location_entry.get_text() , haven_description = description_entry.get_text();
+    					
 		//Envoie les information aux différentes classe afin de pouvroi les récuperer aprés pour le dessin de la feuille de personnage 
 		personnage.setNomPersonnage(nomP);	// nom du personnage 
 		clan.SetPlayername(nomJ); // nom du joueur 
@@ -943,6 +1094,7 @@ void Fenetre::create_button_clicked() //Signal du changement de la combobox
 		personnage.setWillpower(wil); //le score de willpower
 		otherTraits.setBloodpool(blood); //le niveau de sang du personnage 
 		otherTraits.setBloodpoolturn(bloodt); //le niveau de blood per turn
+		clan.SetWeakness(weaknes); //faiblesse du personnage 
 		
 		Feuille_Vampire.show(); 		
 	}
@@ -1005,6 +1157,7 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	string wi =  personnage.getWillpower(); //nom du sire
 	string bloo = otherTraits.getBloodpool(); //blood pool
 	string bloot = otherTraits.getBloodpoolturn(); //blood pool per turn
+	string weakness = clan.GetWeakness(); //Weakness
 	
 	//Les points pour chaque élément d'attributs 
 	int strenght = attribut[0], dexterity = attribut[1] , stamina = attribut[2] ,charisma = attribut[3] ,manipulation = attribut[4] ,appearance = attribut[5] ,perception = attribut[6] ,intelligence = attribut[7] ,wits = attribut[8] ;
@@ -1023,6 +1176,10 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	//Virtues	
 	int virtue1 = virtues[0] , virtue2 = virtues[1] , virtue3 = virtues[2] ;
 	
+	//merits 		
+	string merits1 = meritsListe[0] , merits2= meritsListe[1] , merits3= meritsListe[2] , merits4= meritsListe[3] , merits5= meritsListe[4] ;		
+	int meritsP1 = merits[0] , meritsP2 = merits[1] , meritsP3 = merits[2] , meritsP4 = merits[3] , meritsP5 = merits[4] ;
+			
 	attribut.clear();
 	abilitie.clear();
 	liste_discip.clear();
@@ -1030,7 +1187,9 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	backgroundListe.clear();
 	background.clear();
 	virtues.clear();
-			     
+	meritsListe.clear();
+	merits.clear();
+	     
 	if(!monImage)
 	{
         	return false;
@@ -1131,7 +1290,35 @@ bool DrawImage::on_draw(const Cairo::RefPtr<Cairo::Context>& cr)
 	//Blood pool
 	draw_text(cr, 668 , 1680 , bloo);
 	draw_text(cr, 780 , 1800 , bloot);
-		
+	
+	//merits 
+	draw_text(cr, 245, 2370 , merits1);
+	draw_text(cr, 245 , 2400 , merits2);	
+	draw_text(cr, 245 , 2430 , merits3);
+	
+	draw_text(cr, 600 , 2370 , to_string(meritsP1));
+	draw_text(cr, 600 , 2400 , to_string(meritsP2));
+	draw_text(cr, 600 , 2430 , to_string(meritsP3));
+	
+	//weakness 
+	draw_text(cr, 990 , 1680 , weakness);
+	
+	//Expanded Background 
+	
+	draw_text(cr, 390 , 4420 , allies);
+	draw_text(cr, 390 , 4520 ,contacts);
+	draw_text(cr, 390 , 4670 , fame);
+	draw_text(cr, 390 , 4810 , herd);
+	draw_text(cr, 390 , 4960, influence);
+	draw_text(cr, 980 , 4415 , mentor);
+	draw_text(cr, 980, 4520 , resources);
+	draw_text(cr, 980 , 4670 , retainers);
+	draw_text(cr, 980 , 4810 , status);
+	
+	//haven
+	draw_text(cr, 390 , 5750 , haven_location);
+	draw_text(cr, 980 , 5750 , haven_description);
+	
 	return true;
 		
 }
@@ -1152,36 +1339,8 @@ void DrawImage::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int rectangle
   //get the text dimensions (it updates the variables -- by reference)
   layout->get_pixel_size(text_width, text_height);
 
-  // Position the text in the middle
+  // Position le text au milieu
   cr->move_to((rectangle_width-text_width)/2, (rectangle_height-text_height)/2);
   layout->show_in_cairo_context(cr);
 } 	
-     	/*    	
-     	//Haven      	
-     	haven_label.set_text("###########  HAVEN  ###########");   
-     	haven_label.set_justify(Gtk::JUSTIFY_LEFT); 	
-     	mainGrid.attach(haven_label, 3, 25, 1,1);
   
- 	//Localisation de Haven
-     	haven_location_label.set_text("  Location:  ");     		
-     	mainGrid.attach(haven_location_label, 0, 26, 1,1);
-     	location_entry.set_max_length(50);
-   	mainGrid.attach(location_entry, 1, 27, 1, 1);
-    	
-    	//Description de Haven
-     	haven_description_label.set_text("  Description:  ");     		
-     	mainGrid.attach(haven_description_label, 2, 28, 1,1);
-     	description_entry.set_max_length(50);
-   	mainGrid.attach(description_entry, 3, 29, 1, 1);
-    	
-    	//Weakness (faiblesse du personnage)
-     	weakness_label.set_text("  Weakness:  ");     		
-     	mainGrid.attach(weakness_label, 0, 30, 1,1);
-     	weakness_entry.set_max_length(50);
-   	mainGrid.attach(weakness_entry, 1, 31, 1, 1);
-   
-     	*/
-     	
-  
-
-

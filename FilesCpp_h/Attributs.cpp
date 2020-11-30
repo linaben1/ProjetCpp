@@ -1,14 +1,10 @@
-#include "MiniProjet.h"
-
-
-
-
+#include "Projet.h"
 
 
 /****************************************************************************************************************************************************************/
 /** Fonction qui permet de fixer une condition pour ensuite la vérifier afin de controller la distribution des points dans les différents catégories des attributs 
  */
-int Attributes::check_attributspoint(const string &combinaisonPoints, int physical, int social , int mental  )
+int Attributes::check_attributspoint(string combinaisonPoints, int physical, int social , int mental  )
 {		
 	int condition = 0 ;
 	//deque<string> results;		
